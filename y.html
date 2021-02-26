@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            margin: 0;
+        }
+
+        #Main {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-image: url(https://i.postimg.cc/pr1CRY7Q/30.gif);
+            background-size: cover;
+        }
+        .Center1 {
+            width: 3vw;
+            height: 3vw;
+            margin: 1.5vw;
+            background: white;
+            border-radius: 50%;
+            opacity: .5;
+            filter: blur(6px);
+            transition: all .5s ease;
+        }
+        .Center2 {
+            width: 2vw;
+            height: 2vw;
+            margin: 1vw;
+            background: white;
+            border-radius: 50%;
+            opacity: .5;
+            filter: blur(6px);
+            transition: all .5s ease;
+        }
+        #Stars {
+            width: 100%;
+            height: 100%; position:absolute;
+        }
+        .star1 {
+            width: 6vw;
+            height: 6vw; position:absolute; 
+            border-radius: 50%;
+        }
+        .star2 {
+            width: 4vw;
+            height: 4vw;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .bk1 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            filter: blur(2px);
+            animation: Spin 60s infinite;
+        }
+        .bk2 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            filter: blur(2px);
+            animation: Spin2 60s infinite;
+        }
+
+        @keyframes Spin {
+            0% {
+                transform: rotate(0deg);
+                opacity: .6;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                transform: rotate(-70deg);
+                opacity: .3;
+            }
+
+            30% {
+                opacity: .7;
+            }
+
+            40% {
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .4;
+            }
+
+            60% {
+                transform: rotate(90deg);
+                opacity: .8;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: .6;
+            }
+
+            100% {
+                transform: rotate(0deg);
+                opacity: .8
+            }
+        }
+        @keyframes Spin2 {
+            0% {
+                transform: rotate(0deg);
+                opacity: .6;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                transform: rotate(90deg);
+                opacity: .3;
+            }
+
+            30% {
+                opacity: .7;
+            }
+
+            40% {
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .4;
+            }
+
+            60% {
+                transform: rotate(-60deg);
+                opacity: .8;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: .6;
+            }
+
+            100% {
+                transform: rotate(0deg);
+                opacity: .8
+            }
+        }
+        .star1:hover .Center1 {
+            width: 5vw;
+            height: 5vw;
+            margin: .5vw;
+            opacity: 1;
+            filter: blur(15px);
+        }
+        .star2:hover .Center2 {
+            width: 3vw;
+            height: 3vw;
+            margin: .5vw;
+            opacity: 1;
+            filter: blur(10px);
+        }
+
+        /*Starposition*/
+        #S1 { top:5%; left:50%;
+        }
+        #S3 { top:30%; left:64%;
+        }
+        #S4 { top:65%; left:57%;
+        }
+        #S2 {
+            top: 25%;
+            left: 37%;
+        }
+        #S5 {
+            top: 32%;
+            left: 25%;
+        }
+        #S6 {
+            top: 78%;
+            left: 34%;
+        }
+        #S7 {
+            top: 90%;
+            left: 31%;
+        }
+        /*lines*/
+        .lin {
+            position: absolute;
+            z-index: 1;
+            background: white;
+            filter: blur(3px);
+            transition: all .5s ease;
+            height: .1vw; opacity:.4;
+        }
+
+        #Lin1 {
+            width: 18vw;
+            left: 1vw;
+            top: 9vw; z-index:-1;
+            transform: rotate(-137deg);
+        }
+        #S1:hover #Lin1 { opacity:1;
+        }
+        #Lin1-1 {
+            width: 18vw;
+            left: -14vw;
+            top: -4.6vw;
+            z-index: -1;
+            transform: rotate(-137deg);
+        }
+        #S3:hover #Lin1-1 {
+            opacity: 1;
+            /*#Lin2 {
+            width: 8vw;
+            height: .15vw;
+            left: 3vw;
+            top: .8vw;
+            transform: rotate(-195deg);
+        }*/
+    </style>
+</head>
+
+
+<body>
+    <div id="Main">
+        <div id="Stars">
+            <div class="star1" id="S1"><div id="Lin1" class="lin"></div><div id="Lin3" class="lin"></div><img class="bk1" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center1"></div></div>
+            <div class="star1" id="S3"><div id="Lin1-1" class="lin"></div><img class="bk1" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center1"></div></div>
+            <div class="star1" id="S4"><img class="bk1" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center1"></div></div>
+
+            <div class="star2" id="S2"><img class="bk2" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center2"></div></div>
+            <div class="star2" id="S5"><img class="bk2" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center2"></div></div>
+            <div class="star2" id="S6"><img class="bk2" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center2"></div></div>
+            <div class="star2" id="S7"><img class="bk2" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center2"></div></div>
+        </div>
+
+    </div>
+</body>
+</html>
