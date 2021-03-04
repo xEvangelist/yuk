@@ -59,8 +59,69 @@
             background: black;
             animation: toWhite 30s infinite;
             animation-delay: 3s;
+            transition: all 1s ease;
         }
+        @keyframes toblack {
+            0% {
+                background: white;
+            }
 
+            5% {
+                background: black;
+            }
+
+            10% {
+                background: white;
+            }
+
+            30% {
+                background: white;
+            }
+
+            32% {
+                background: black;
+            }
+
+            35% {
+                background: white;
+            }
+
+            50% {
+                background: white;
+            }
+
+            51% {
+                background: black;
+            }
+
+            57% {
+                background: white;
+            }
+
+            68% {
+                background: white;
+            }
+
+            68.5% {
+                background: black;
+            }
+
+            68.8% {
+                background: white;
+            }
+
+            69% {
+                background: black;
+            }
+
+            70% {
+                background: white;
+            }
+
+            100% {
+                background: white;
+            }
+        }
         @keyframes toWhite {
             0% {
                 background: black;
@@ -736,6 +797,112 @@
                 animation-delay: 3s, 0s;
                 letter-spacing: .1vw;
             }
+        #main:target { filter:invert(100%);
+        }
+        #MnuTxt {  width:20vw; height:1vw;  position:absolute; z-index:5; left:2vw; 
+        }
+        .Ciric { top:1.5vw;
+            width: .5vw;
+            height: .5vw;
+            mix-blend-mode: difference;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            filter: blur(2px);
+            animation: toblack 30s infinite;
+            animation-delay: 3s;
+        }
+        .Cirice {
+            top: 1.5vw;
+            width: .5vw;
+            height: .5vw;
+            mix-blend-mode: difference;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            filter: blur(2px);
+            animation: toblack 30s infinite;
+            animation-delay: 3s; z-index:-1; opacity:0;
+        }
+        #main:target .Cirice { z-index:10; 
+        }
+            #cir2 { left:-.4vw;
+            }
+        .Pmnu {
+            color: white; 
+            mix-blend-mode: difference; background:transparent;
+            position: absolute;
+           
+        }
+        #MnuTxt span { 
+            color: white;
+            font-size: .5vw;
+            letter-spacing: .2vw;
+            margin-right: 2vw;
+            mix-blend-mode: difference;
+            animation: toinvert 30s infinite;
+            animation-delay: 3s;
+        }
+        #Music { background:inherit; position:absolute; width:25vw; height:2vw; top:48vw; left:73%;
+        }
+        #Paus { width:1.5vw; height:1.5vw; position:absolute; font-size:1vw; letter-spacing:.3vw; color:white; text-align:center;
+        }
+        #LnG { position:absolute; width:90%; height:.3vw; background:white; left:10%; top:20%;
+        }
+        #Mlin {
+            position: absolute;
+            width: 98%;
+            background: black;
+            height: 40%;
+            top: 20%;
+            left: 1%;
+            animation: LeftLin 500s 1;
+        }
+        #circ2 {
+            width: 1vw;
+            height: 1vw;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            left: 10%;
+            filter: blur(1px);
+            animation: LeftC 500s 1;
+        }
+        @keyframes LeftC {
+            0% {
+                left: 10%;
+            }
+
+            100% {
+                left: 99%;
+            }
+        }
+        @keyframes LeftLin {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+        #Xatlogo {
+            width: 6vw;
+            height: 4vw;
+            position: absolute;
+            top: 47vw;
+            left: 1vw;
+             filter:invert(100%);
+        }
+            #Xatlogo img { width:100%;
+            }
+        #MscT { position:absolute; width:20vw; height:1vw;  top:1.5vw; filter:blur(.5px);
+        }
+        #Ti { font-size:.8vw; color:white; letter-spacing:.2vw; margin:0;
+        }
+        #main:target #Rimg img { filter:blur(1px);
+        }
+        
     </style>
 </head>
 
@@ -746,22 +913,28 @@
             <img src="https://vignette.wikia.nocookie.net/battlefordreamisland/images/2/29/X.gif/revision/latest?cb=20171228121506" />
         </div> 
         <div id="Rain">
-
+            
             <div id="Rimg">
                 <img src="https://i.postimg.cc/xdsXTGK8/rain-clipart-rain-gif-16.gif" />
             </div>
+            <div id="Xatlogo"><img src="https://i.postimg.cc/9FmQ1fMP/1.png" /></div><div id="Music">
+
+    <div id="MscT"> <p id="Ti">BROKEN WINGS</p></div>
+    <div id="LnG"><div id="Mlin"></div></div><div id="circ2"></div>
+    <div id="Paus"> II</div>
+</div>
             <div id="imgFil">
-                <img id="imgfl" src="https://i.postimg.cc/K8r7X78q/vignette.png" />
+                <img id="imgfl" src="https://i.postimg.cc/K8r7X78q/vignette.png" />  <div id="MnuTxt"><span>XAT</span><span>EDIT</span><span>INVERT</span><span>ABOUT THIS</span></div>
             </div>
             <div id="Ldesc"><p>𝑪𝒂𝒏 𝒚𝒐𝒖 𝒔𝒂𝒚 𝒘𝒉𝒂𝒕 𝒚𝒐𝒖 𝒅𝒐𝒏'𝒕 𝒌𝒏𝒐𝒘 𝒊𝒏 𝒅𝒂𝒓𝒌𝒏𝒆𝒔𝒔 𝒐𝒇 𝒕𝒉𝒆 𝒔𝒊𝒏𝒏𝒆𝒓?</p></div>
             <div class="line1" id="ln1">
-                <div class="line" id="Ln2">
+                <div class="line" id="Ln2"><a href="https://xat.com/"><div class="Ciric"></div></a>
                     <div class="line" id="Ln3">
-                        <div class="line" id="Ln4">
+                        <div class="line" id="Ln4"><a href="https://xat.com/web_gear/chat/editprofile.php?email="><div class="Ciric" id="cir2"></div></a>
                             <div class="line" id="Ln5">
-                                <div class="line" id="Ln6">
+                                <div class="line" id="Ln6"><a href="#main"><div class="Ciric" id="cir2"></div></a><a href="#"><div class="Cirice" id="cir2"></div></a>
                                     <div class="line" id="Ln7">
-                                        <div class="line" id="Ln8">
+                                        <div class="line" id="Ln8"><a href="https://xat.me/xEvangelist"><div class="Ciric"></div></a>
                                             <div class="line" id="Ln9">
                                                 <div class="line" id="Ln10">
 
