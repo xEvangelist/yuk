@@ -3,8 +3,6 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-
-
     <title></title>
 
     <style>
@@ -13,871 +11,511 @@
             height: 100%;
             position: fixed;
             margin: 0;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        #Rain {
-            width: 100vw;
-            height: 100vw;
-            z-index: 10;
-            position: absolute;
-            /*background-image: url(https://i.postimg.cc/xdsXTGK8/rain-clipart-rain-gif-16.gif);
-            background-repeat: repeat;*/
-            mix-blend-mode: difference;
-        }
-
-        #Rimg {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: 1;
-        }
-
-            #Rimg img {
-                width: 100%;
-                opacity: .6;
-                -webkit-filter: blur(2px);
-            }
-
-        #Ximg {
-            width: 50vw;
-            height: 50vw;
-            position: absolute;
-            left: 25vw;
-            top: 0;
-            mix-blend-mode: difference;
-        }
-
-            #Ximg img {
-                width: 100%;
-            }
-
-        #main {
+        #Main {
             width: 100%;
             height: 100%;
             position: fixed;
-            background: black;
-            animation: toWhite 30s infinite;
-            animation-delay: 3s;
-            transition: all 1s ease;
+            background-image: url(https://i.postimg.cc/pr1CRY7Q/30.gif);
+            background-size: cover;
+            transition: all 1s ease; 
         }
-        @keyframes toblack {
-            0% {
-                background: white;
-            }
-
-            5% {
-                background: black;
-            }
-
-            10% {
-                background: white;
-            }
-
-            30% {
-                background: white;
-            }
-
-            32% {
-                background: black;
-            }
-
-            35% {
-                background: white;
-            }
-
-            50% {
-                background: white;
-            }
-
-            51% {
-                background: black;
-            }
-
-            57% {
-                background: white;
-            }
-
-            68% {
-                background: white;
-            }
-
-            68.5% {
-                background: black;
-            }
-
-            68.8% {
-                background: white;
-            }
-
-            69% {
-                background: black;
-            }
-
-            70% {
-                background: white;
-            }
-
-            100% {
-                background: white;
-            }
+          
+        .Center1 {
+            width: 3vw;
+            height: 3vw;
+            margin: 1.5vw;
+            background: white;
+            border-radius: 50%;
+            opacity: .5;
+            filter: blur(6px);
+            transition: all .5s ease;
         }
-        @keyframes toWhite {
-            0% {
-                background: black;
-            }
-
-            5% {
-                background: white;
-            }
-
-            10% {
-                background: black;
-            }
-
-            30% {
-                background: black;
-            }
-
-            32% {
-                background: white;
-            }
-
-            35% {
-                background: black;
-            }
-
-            50% {
-                background: black;
-            }
-
-            51% {
-                background: white;
-            }
-
-            57% {
-                background: black;
-            }
-
-            68% {
-                background: black;
-            }
-
-            68.5% {
-                background: dimgray;
-            }
-
-            68.8% {
-                background: black;
-            }
-
-            69% {
-                background: dimgray;
-            }
-
-            70% {
-                background: black;
-            }
-
-            100% {
-                background: black;
-            }
-        }
-
-        .line {
+        .Center2 {
             width: 2vw;
-            height: 100%;
-            position: absolute;
-            transition: all .5s ease;
-            background: inherit;
-            left: 100%;
-            z-index: 999;
-        }
-
-        .line1 {
-            width: 2vw;
-            height: 100%;
-            z-index: 999;
-            position: absolute;
+            height: 2vw;
+            margin: 1vw;
+            background: white;
+            border-radius: 50%;
+            opacity: .5;
+            filter: blur(6px);
             transition: all .5s ease;
         }
-
-        #MainP {
-            background: inherit;
-            mix-blend-mode: difference;
-            width: 0;
-            height: 0;
-            top: 20%;
+        #Stars {
+            width: 100%;
+            height: 100%; position:absolute;
+        }
+        .star1:hover, .star2:hover { cursor:help;
+        }
+        .star1 {
+            width: 6vw;
+            height: 6vw; position:absolute; 
+            border-radius: 50%;
+        }
+        .star2 {
+            width: 4vw;
+            height: 4vw;
             position: absolute;
-            left: -85vw;
-            transition: all .5s ease;
+            border-radius: 50%;
         }
-
-            #MainP:hover {
-                margin-left: 7vw;
-            }
-
-        #Rnm {
-            font-size: 3.5vw;
-            letter-spacing: .5vw;
-            color: white;
-            margin: 0; filter:blur(1.5px);
-            mix-blend-mode: difference;
-            font-weight: lighter;
-        }
-
-        #RnmD {
-            position: absolute;
-            width: auto;
-            height: auto;
-            mix-blend-mode: difference;
-        }
-
-        #ImgDv {
-            mix-blend-mode: difference;
-            position: absolute;
-            background: transparent;
-            width: 20vw;
-            height: 20vw;
-            left: 40vw;
-            top: -5vw;
-            transition: all .5s ease;
-        }
-
-            #ImgDv img {
-                background: inherit;
-                -webkit-filter: blur(2px);
-                width: 100%;
-                filter: invert(100%);
-                transform: rotate(-180deg);
-                mix-blend-mode: difference;
-            }
-
-
-
-
-        #ln1:hover #MainP {
-            left: -80vw;
-        }
-
-        #Ln2:hover #MainP {
-            left: -80.208333vw;
-        }
-
-        #Ln2:hover #ImgDv {
-            left: 45vw;
-        }
-
-        #Ln3:hover #MainP {
-            left: -80.41666vw;
-        }
-
-        #Ln4:hover #MainP {
-            left: -80.624999vw;
-        }
-
-        #Ln5:hover #MainP {
-            left: -80.8333vw;
-        }
-
-        #ln6:hover #MainP {
-            left: -81.04166vw;
-        }
-
-        #Ln7:hover #MainP {
-            left: -81.24999vw;
-        }
-
-        #Ln8:hover #MainP {
-            left: -81.458333vw;
-        }
-
-        #Ln9:hover #MainP {
-            left: -81.666vw;
-        }
-
-        #Ln10:hover #MainP {
-            left: -81.87499vw;
-        }
-
-        #ln11:hover #MainP {
-            left: -82.08333vw;
-        }
-
-        #Ln12:hover #MainP {
-            left: -82.291666vw;
-        }
-
-        #Ln13:hover #MainP {
-            left: -82.4999vw;
-        }
-
-        #Ln14:hover #MainP {
-            left: -82.708333vw;
-        }
-
-        #Ln15:hover #MainP {
-            left: -82.91666vw;
-        }
-
-        #ln16:hover #MainP {
-            left: -83.124999vw;
-        }
-
-        #Ln17:hover #MainP {
-            left: -83.333vw;
-        }
-
-        #Ln18:hover #MainP {
-            left: -83.541666vw;
-        }
-
-        #Ln19:hover #MainP {
-            left: -83.74999vw;
-        }
-
-        #Ln20:hover #MainP {
-            left: -83.958333vw;
-        }
-
-        #ln21:hover #MainP {
-            left: -84.1666vw;
-        }
-
-        #Ln22:hover #MainP {
-            left: -84.374999vw;
-        }
-
-        #Ln23:hover #MainP {
-            left: -84.58333vw;
-        }
-
-        #Ln24:hover #MainP {
-            left: -84.79166vw;
-        }
-
-        #Ln25:hover #MainP {
-            left: -84.999vw;
-        }
-
-        #ln26:hover #MainP {
-            left: -85.20833vw;
-        }
-
-        #Ln27:hover #MainP {
-            left: -85.41666vw;
-        }
-
-        #Ln28:hover #MainP {
-            left: -85.62499vw;
-        }
-
-        #Ln29:hover #MainP {
-            left: -85.8333vw;
-        }
-
-        #Ln30:hover #MainP {
-            left: -86.041666vw;
-        }
-
-        #ln31:hover #MainP {
-            left: -86.24999vw;
-        }
-
-        #Ln32:hover #MainP {
-            left: -86.458333vw;
-        }
-
-        #Ln33:hover #MainP {
-            left: -86.666vw;
-        }
-
-        #Ln34:hover #MainP {
-            left: -86.874999vw;
-        }
-
-        #Ln35:hover #MainP {
-            left: -87.08333vw;
-        }
-
-        #Ln36:hover #MainP {
-            left: -87.29166vw;
-        }
-
-        #Ln37:hover #MainP {
-            left: -87.4999vw;
-        }
-
-        #Ln38:hover #MainP {
-            left: -87.70833vw;
-        }
-
-        #Ln39:hover #MainP {
-            left: -87.91666vw;
-        }
-
-        #Ln40:hover #MainP {
-            left: -88.124999vw;
-        }
-
-        #ln41:hover #MainP {
-            left: -88.3333vw;
-        }
-
-        #Ln42:hover #MainP {
-            left: -88.541666vw;
-        }
-
-        #Ln43:hover #MainP {
-            left: -88.74999vw;
-        }
-
-        #Ln44:hover #MainP {
-            left: -88.95833vw;
-        }
-
-        #Ln45:hover #MainP {
-            left: -89.1666vw;
-        }
-
-        #ln46:hover #MainP {
-            left: -89.374999vw;
-        }
-
-        #Ln47:hover #MainP {
-            left: -89.58333vw;
-        }
-
-        #Ln48:hover #MainP {
-            left: -89.79166vw;
-        }
-
-        #Ln49:hover #MainP {
-            left: -89.9999vw;
-        }
-
-        #Ln50:hover #MainP {
-            left: -90.208333vw;
-        }
-
-        #ln1:hover #ImgDv {
-            left: 40vw;
-        }
-
-        #Ln2:hover #ImgDv {
-            left: 40.0416vw;
-        }
-
-        #Ln3:hover #ImgDv {
-            left: 40.0833vw;
-        }
-
-        #Ln4:hover #ImgDv {
-            left: 40.125vw;
-        }
-
-        #Ln5:hover #ImgDv {
-            left: 40.1666vw;
-        }
-
-        #ln6:hover #ImgDv {
-            left: 40.2083vw;
-        }
-
-        #Ln7:hover #ImgDv {
-            left: 40.25vw;
-        }
-
-        #Ln8:hover #ImgDv {
-            left: 40.2916vw;
-        }
-
-        #Ln9:hover #ImgDv {
-            left: 40.4166vw;
-        }
-
-        #Ln10:hover #ImgDv {
-            left: 40.375vw;
-        }
-
-        #ln11:hover #ImgDv {
-            left: 40.4583vw;
-        }
-
-        #Ln12:hover #ImgDv {
-            left: 40.5vw;
-        }
-
-        #Ln13:hover #ImgDv {
-            left: 40.5416vw;
-        }
-
-        #Ln14:hover #ImgDv {
-            left: 40.5833vw;
-        }
-
-        #Ln15:hover #ImgDv {
-            left: 40.625vw;
-        }
-
-        #ln16:hover #ImgDv {
-            left: 40.6666vw;
-        }
-
-        #Ln17:hover #ImgDv {
-            left: 40.7083vw;
-        }
-
-        #Ln18:hover #ImgDv {
-            left: 40.75vw;
-        }
-
-        #Ln19:hover #ImgDv {
-            left: 40.7916vw;
-        }
-
-        #Ln20:hover #ImgDv {
-            left: 40.8333vw;
-        }
-
-        #ln21:hover #ImgDv {
-            left: 40.875vw;
-        }
-
-        #Ln22:hover #ImgDv {
-            left: 40.9166vw;
-        }
-
-        #Ln23:hover #ImgDv {
-            left: 40.9583vw;
-        }
-
-        #Ln24:hover #ImgDv {
-            left: 41vw;
-        }
-
-        #Ln25:hover #ImgDv {
-            left: 41.0416vw;
-        }
-
-        #ln26:hover #ImgDv {
-            left: 41.0833vw;
-        }
-
-        #Ln27:hover #ImgDv {
-            left: 41.125vw;
-        }
-
-        #Ln28:hover #ImgDv {
-            left: 41.1666vw;
-        }
-
-        #Ln29:hover #ImgDv {
-            left: 41.2083vw;
-        }
-
-        #Ln30:hover #ImgDv {
-            left: 41.25vw;
-        }
-
-        #ln31:hover #ImgDv {
-            left: 41.2916vw;
-        }
-
-        #Ln32:hover #ImgDv {
-            left: 41.4166vw;
-        }
-
-        #Ln33:hover #ImgDv {
-            left: 41.375vw;
-        }
-
-        #Ln34:hover #ImgDv {
-            left: 41.4583vw;
-        }
-
-        #Ln35:hover #ImgDv {
-            left: 41.5vw;
-        }
-
-        #Ln36:hover #ImgDv {
-            left: 41.5416vw;
-        }
-
-        #Ln37:hover #ImgDv {
-            left: 41.5833vw;
-        }
-
-        #Ln38:hover #ImgDv {
-            left: 41.625vw;
-        }
-
-        #Ln39:hover #ImgDv {
-            left: 41.6666vw;
-        }
-
-        #Ln40:hover #ImgDv {
-            left: 41.7083vw;
-        }
-
-        #ln41:hover #ImgDv {
-            left: 41.75vw;
-        }
-
-        #Ln42:hover #ImgDv {
-            left: 41.7916vw;
-        }
-
-        #Ln43:hover #ImgDv {
-            left: 41.8333vw;
-        }
-
-        #Ln44:hover #ImgDv {
-            left: 41.875vw;
-        }
-
-        #Ln45:hover #ImgDv {
-            left: 41.9166vw;
-        }
-
-        #ln46:hover #ImgDv {
-            left: 41.9583vw;
-        }
-
-        #Ln47:hover #ImgDv {
-            left: 42vw;
-        }
-
-        #Ln48:hover #ImgDv {
-            left: 42.0416vw;
-        }
-
-        #Ln49:hover #ImgDv {
-            left: 42.0833vw;
-        }
-
-        #Ln50:hover #ImgDv {
-            left: 42.125vw;
-        }
-
-
-        #imgFil {
-            position: absolute;
-            z-index: 2;
+        .bk1 {
             width: 100%;
             height: 100%;
-            mix-blend-mode: normal;
+            position: absolute;
+            filter: blur(2px);
+            animation: Spin 60s infinite;
+        }
+        .bk2 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            filter: blur(2px);
+            animation: Spin2 60s infinite;
         }
 
-        #imgfl {
-            width: 100vw;
-            animation: toinvert 30s infinite, move .1s infinite;
-            animation-delay: 3s, 0s;
-            position: absolute;
-        }
-
-        #Desc {
-            left: 50vw;
-            position: absolute;
-           height:.8vw;
-            top: 4.5vw;
-            background: white; filter:blur(1px);
-            width: 12.5vw;
-            mix-blend-mode: difference; border-radius:.5vw;
-        }
-        #dsc {
-            position: absolute;
-            left: 53vw;
-            color: white; top:5vw;
-            font-size: .7vw;
-            letter-spacing: .15vw;
-            mix-blend-mode: difference;
-        }
-        #Ds1 {
-            color: white;
-            font-size: .7vw; top:3.5vw; position:absolute;
-            letter-spacing: .15vw; width:20vw;
-            mix-blend-mode: difference;
-        }
-        @keyframes move {
+        @keyframes Spin {
             0% {
+                transform: rotate(0deg);
+                opacity: .6;
+            }
+
+            10% {
                 opacity: 1;
             }
 
             20% {
-                opacity: .9;
-            }
-
-            40% {
-                opacity: 1;
-            }
-
-            60% {
-                opacity: .9;
-            }
-
-            80% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: .9;
-            }
-        }
-
-        @keyframes toinvert {
-            0% {
-                filter: invert(0%);
-            }
-
-            5% {
-                filter: invert(100%);
-            }
-
-            10% {
-                filter: invert(0%);
+                transform: rotate(-70deg);
+                opacity: .3;
             }
 
             30% {
-                filter: invert(0%);
+                opacity: .7;
             }
 
-            32% {
-                filter: invert(100%);
-            }
-
-            35% {
-                filter: invert(0%);
+            40% {
+                transform: rotate(0deg);
+                opacity: 1;
             }
 
             50% {
-                filter: invert(0%);
+                opacity: .4;
             }
 
-            51% {
-                filter: invert(100%);
-            }
-
-            57% {
-                filter: invert(0%);
-            }
-
-            68% {
-                filter: invert(0%);
-            }
-
-            68.5% {
-                filter: invert(100%);
-            }
-
-            68.8% {
-                filter: invert(0%);
-            }
-
-            69% {
-                filter: invert(100%);
+            60% {
+                transform: rotate(90deg);
+                opacity: .8;
             }
 
             70% {
-                filter: invert(0%);
+                opacity: 1;
+            }
+
+            70% {
+                opacity: .6;
             }
 
             100% {
-                filter: invert(0%);
+                transform: rotate(0deg);
+                opacity: .8
             }
         }
-
-        #Ldesc { position:absolute;  width:100%; height:auto; top:47vw; text-align:center;
-        }
-            #Ldesc p {
-                color: black;
-                filter: blur(1px);
-                font-size: .75vw;
-                animation: toinvert 30s infinite, move .1s infinite;
-                animation-delay: 3s, 0s;
-                letter-spacing: .1vw;
-            }
-        #main:target { filter:invert(100%);
-        }
-        #MnuTxt {  width:20vw; height:1vw;  position:absolute; z-index:5; left:2vw; 
-        }
-        .Ciric { top:1.5vw;
-            width: .5vw;
-            height: .5vw;
-            mix-blend-mode: difference;
-            background: white;
-            border-radius: 50%;
-            position: absolute;
-            filter: blur(2px);
-            animation: toblack 30s infinite;
-            animation-delay: 3s;
-        }
-        .Cirice {
-            top: 1.5vw;
-            width: .5vw;
-            height: .5vw;
-            mix-blend-mode: difference;
-            background: white;
-            border-radius: 50%;
-            position: absolute;
-            filter: blur(2px);
-            animation: toblack 30s infinite;
-            animation-delay: 3s; z-index:-1; opacity:0;
-        }
-        #main:target .Cirice { z-index:10; 
-        }
-            #cir2 { left:-.4vw;
-            }
-        .Pmnu {
-            color: white; 
-            mix-blend-mode: difference; background:transparent;
-            position: absolute;
-           
-        }
-        #MnuTxt span { 
-            color: white;
-            font-size: .5vw;
-            letter-spacing: .2vw;
-            margin-right: 2vw;
-            mix-blend-mode: difference;
-            animation: toinvert 30s infinite;
-            animation-delay: 3s;
-        }
-        #Music { background:inherit; position:absolute; width:25vw; height:2vw; top:48vw; left:73%;
-        }
-        #Paus { width:1.5vw; height:1.5vw; position:absolute; font-size:1vw; letter-spacing:.3vw; color:white; text-align:center;
-        }
-        #LnG { position:absolute; width:90%; height:.3vw; background:white; left:10%; top:20%;
-        }
-        #Mlin {
-            position: absolute;
-            width: 98%;
-            background: black;
-            height: 40%;
-            top: 20%;
-            left: 1%;
-            animation: LeftLin 500s 1;
-        }
-        #circ2 {
-            width: 1vw;
-            height: 1vw;
-            border-radius: 50%;
-            background: white;
-            position: absolute;
-            left: 10%;
-            filter: blur(1px);
-            animation: LeftC 500s 1;
-        }
-        @keyframes LeftC {
+        @keyframes Spin2 {
             0% {
-                left: 10%;
+                transform: rotate(10deg);
+                opacity: .6;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            24% {
+                transform: rotate(90deg);
+                opacity: .3;
+            }
+
+            30% {
+                opacity: .7;
+            }
+
+            40% {
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .4;
+            }
+
+            60% {
+                transform: rotate(-60deg);
+                opacity: .8;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: .6;
             }
 
             100% {
-                left: 99%;
+                transform: rotate(0deg);
+                opacity: .8
             }
         }
-        @keyframes LeftLin {
+        .star1:hover .Center1 {
+            width: 5vw;
+            height: 5vw;
+            margin: .5vw;
+            opacity: 1;
+            filter: blur(15px);
+        }
+        .star2:hover .Center2 {
+            width: 3vw;
+            height: 3vw;
+            margin: .5vw;
+            opacity: 1;
+            filter: blur(10px);
+        }
+
+        /*Starposition*/
+        #S1 { top:5%; left:50%;
+        }
+        #S3 { top:30%; left:64%;
+        }
+        #S4 { top:65%; left:57%;
+        }
+        #S2 {
+            top: 25%;
+            left: 37%;
+        }
+        #S5 {
+            top: 32%;
+            left: 25%;
+        }
+        #S6 {
+            top: 78%;
+            left: 34%;
+        }
+        #S7 {
+            top: 90%;
+            left: 31%;
+        }
+        /*lines*/
+        .lin {
+            position: absolute;
+            z-index: 1;
+            background: white;
+            filter: blur(3px);
+            transition: all .5s ease;
+            height: .15vw; opacity:.4;
+        }
+
+        #Lin1 {
+            width: 18vw;
+            left: 1vw;
+            top: 9vw; z-index:-1;
+            transform: rotate(-137deg);
+        }
+        #Lin2 {
+            width: 32vw;
+            left: -10vw;
+            top: 17vw;
+            z-index: -1;
+            transform: rotate(256deg);
+        }
+        #Lin3 {
+            width: 15vw;
+            left: -12vw;
+            top: 8vw;
+            z-index: -1;
+            transform: rotate(145deg);
+        }
+        #Lin4 {
+            width: 18vw;
+            left: -2vw;
+            top: -7vw;
+            z-index: -1;
+            transform: rotate(110deg);
+        }
+        #Lin5 {
+            width: 25vw;
+            left: -21vw;
+            top: 5.5vw;
+            z-index: -1;
+            transform: rotate(-13deg);
+        }
+        #Lin6 {
+            width: 6vw;
+            left: .5vw;
+            top: -1.5vw;
+            z-index: -1;
+            transform: rotate(115deg);
+        }
+        #Lin7 {
+            width: 14vw;
+            left: .5vw;
+            top: .5vw;
+            z-index: -1;
+            transform: rotate(163deg);
+        }
+
+        #Main:target {
+            opacity: .8;
+            filter: invert(100%);
+        }
+
+
+
+        
+
+
+        /*---------------------------------------*/
+
+        #Mnu {
+            width: 20%;
+            height: 100%;
+            position: absolute;
+            left: -15%;
+            background: transparent;
+            transition: all 1s ease;
+            background: transparent;
+        }
+        
+            #Mnu:hover {
+                background: rgba(255,255,255,.5);
+                left: -4%;
+                /*animation: Hov 1s 1;
+                animation-fill-mode: forwards;*/
+            }
+        #Fl {
+            width: 3vw;
+            height: 3vw;
+            position: absolute;
+            top: 1vw;
+            right: 0;
+            transition: all 1s ease;
+        }
+            /*#Fl:hover .im {
+                filter: invert(40%); filter:blur(2px);
+            }*/
+        .im {
+            position: absolute;
+            width: 100%;
+            transition: all .5s ease;
+        }
+        #Mnu:hover #Fl {
+            transform: rotate(90deg);
+            right: .5vw;
+            filter: invert(100%);
+        }
+        #im1 {
+            left: -30%;
+            animation: outF .5s 1;
+            animation-fill-mode: forwards;
+        }
+        #Mnu:hover #im1 {
+            animation: inF .5s 1;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes inF {
+            0% {
+                left: -30%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+        @keyframes outF {
+            0% {
+                left: 0%;
+            }
+
+            100% {
+                left: -30%;
+            }
+        }
+        #Smnu { width:73%; position:absolute; left:24%; top:20%; height:60%;
+        }
+        .Sdiv {
+            width: 100%;
+            height: 4vw;
+            margin-bottom: .5vw;
+            border-radius: 0 1vw 1vw 0;
+            background: rgba(0,0,0,.2);
+            border-left: .2vw solid black;
+            transition: all .5s ease;
+        }
+            .Sdiv:hover {
+                background: rgba(0,0,0,.4);
+            }
+              
+        #Mnu:hover .Iimg {
+            filter: invert(0%);
+        }
+        #Mnu:hover .icon {
+            border-right: .2vw solid black;
+        }
+        .icon {
+            position: absolute;
+            right: 0;
+            width: 2.5vw;
+            height: 2vw;
+            margin-top: 1vw;
+           
+            border-right: .2vw solid lightgray;
+            transition: all 1s ease;
+        }
+            .icon img {
+                filter: invert(100%);
+                width: 2vw;
+                height: 2vw;
+                margin-left: -.5vw;
+                transition: all 1s ease;
+            }
+        #abMe { opacity:0;
+            width: 0px;
+            height: 16vw;
+            background: rgba(255,255,255,.5);
+            border-right: .2vw solid black;
+            left: 110%;
+            position: absolute;
+            top: -20%;
+            border-radius: 4vw 0 0 4vw;
+            overflow: hidden;
+            transition: all 1s ease;
+        }
+        #br { position:absolute; width:.15vw; background:black; left:.2vw; height: 8vw; top:4vw;
+        }
+        #prImg { width:10vw; height:10vw; position:absolute; right:1vw; top:1.5vw; border:.2vw solid black; 
+        }
+        #prImg img { width:90%; margin:5%; box-shadow: 0 0 1vw black;
+        }
+        #Nmes {
+            width: 10vw;
+            position: absolute;
+            right: 1vw; top:12.5vw; font-size:.8vw; letter-spacing:.1vw; text-align:center;
+        }
+        #desc {
+            position: absolute;
+            width: 16vw;
+            background: rgba(0,0,0,.4);
+            left: 1vw;
+            height: 8vw;
+            top: 4vw;
+            opacity: 0;
+        }
+        #SD1:hover #desc {
+            animation: Ocult 1s; 
+            animation-delay:1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes Ocult {
+            0% {
+                opacity:0;
+            }
+
+            100% {
+                opacity:1;
+            }
+        }
+            #desc p { color:darkgray; font-size:.8vw; letter-spacing:.05vw; padding:.5vw;
+            }
+        #SD1:hover #abMe { width:30vw; opacity:1;
+        }
+        #Main:target .NoInvert {
+            filter: invert(100%);
+        }
+        .SDp {
+            position: absolute;
+            left: 2vw;
+            color: white;
+            letter-spacing: .1vw;
+            font-size: .9vw;
+            margin-top: 1.5vw;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            transition: all .5s ease;
+        }
+        .Sdiv:hover .SDp { letter-spacing:.2vw;
+        }
+        #posts {
+            width: 0px;
+            height: 165%;
+            background: rgba(255,255,255,.4);
+            position: absolute;
+            left: 15.5vw;
+            top: -32.5%;
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        #SD3:hover #posts {
+            width: 40vw;
+            opacity: 1;
+        }
+        #btnN { position:absolute; width:2vw; height:2vw; right:1vw; margin-top:1vw; z-index:-1;
+        }
+        #Main:target #btnN { z-index:10;
+        }
+        #MainBox {
+            width: 0vw;
+            left: 7vw;
+            top: 1vw;
+            height: 3vw;
+            position: absolute;
+            filter: blur(0px);
+            opacity: 0;
+        }
+
+        .star1:hover #MainBox {
+            width: 9vw;
+            opacity: 1;
+        }
+
+        .star1:hover #L1 {
+            animation: L1 .5s 1;
+            animation-fill-mode: forwards;
+        }
+
+        #L1 {
+            position: absolute;
+            width: .1vw;
+            height: 100%;
+            background: white;
+            top: 100%;
+        }
+
+        @keyframes L1 {
+            0% {
+                height: 0%;
+                top: 100%;
+            }
+
+            100% {
+                top: 0;
+                height: 100%;
+            }
+        }
+
+        .star1:hover #L2 {
+            animation: L2 .5s 1,ocultt .5s 1;
+            animation-delay: .5s, 0s;
+        }
+
+        #L2 {
+            position: absolute;
+            width: 100%;
+            height: .1vw;
+            background: white;
+        }
+
+        @keyframes L2 {
             0% {
                 width: 0%;
             }
@@ -886,163 +524,223 @@
                 width: 100%;
             }
         }
-        #Xatlogo {
-            width: 6vw;
-            height: 4vw;
-            position: absolute;
-            top: 47vw;
-            left: 1vw;
-             filter:invert(100%);
-        }
-            #Xatlogo img { width:100%;
+
+        @keyframes ocultt {
+            0% {
+                opacity: 0;
             }
-        #MscT { position:absolute; width:20vw; height:1vw;  top:1.5vw; filter:blur(.5px);
+
+            100% {
+                opacity: 0;
+            }
         }
-        #Ti { font-size:.8vw; color:white; letter-spacing:.2vw; margin:0;
+
+        .star1:hover #L3 {
+            animation: L3 .5s 1,ocultt 1s 1;
+            animation-delay: 1s, 0s;
         }
-        #main:target #Rimg img { filter:blur(1px);
+
+        #L3 {
+            position: absolute;
+            width: .1vw;
+            height: 100%;
+            right: 0;
+            background: white;
         }
-        
+
+        @keyframes L3 {
+            0% {
+                height: 0%;
+            }
+
+            100% {
+                height: 100%;
+            }
+        }
+
+        .star1:hover #L4 {
+            animation: L4 .5s 1,ocultt 1.5s 1;
+            animation-delay: 1.5s, 0s;
+        }
+
+        #L4 {
+            position: absolute;
+            width: 100%;
+            height: .1vw;
+            background: white;
+            bottom: 0;
+        }
+
+        @keyframes L4 {
+            0% {
+                width: 0%;
+                left: 100%;
+            }
+
+            100% {
+                width: 100%;
+                left: 0%;
+            }
+        }
+
+        .tx {
+            color: white;
+            background-image: url(https://i.postimg.cc/bP41KjHJ/zz.png);
+            position: absolute;
+            z-index: 11;
+            font-family: 'Times New Roman';
+        }
+
+        @keyframes ocult2 {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        .star1:hover .PLn {
+            animation: ocult2 2s 1;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        .PLn { position:absolute; color:white; font-size:.8vw; letter-spacing:.1vw;  margin:.3vw; opacity:0;
+        }
+        #NmeR { position:absolute; right:10%; top:5%; color:white; font-size:2.5vw; letter-spacing:.2vw; filter:blur(1.5px);
+        }
+        #DescR {
+            position: absolute;
+            right: 10%; top:15%;
+            color: white;
+            font-size: .8vw;
+            letter-spacing: .2vw;
+            filter: blur(.5px);
+        }
+        #xtlog {
+            position: absolute;
+            filter: invert(100%); 
+            width: 6vw;
+            height: 3vw;
+            bottom: 1vw;
+            left: 1%;
+            mix-blend-mode: difference;
+        }
+        #Apost { width:95%; height:90%; position:absolute; left:4%; top:5%; overflow:auto; opacity:0;
+        }
+        #Post {
+            width: 80%;
+            height: auto;
+            margin-top: 5%;
+            margin-bottom: 5%; background:gray;
+            border: .3vw solid black;
+            box-shadow: .5vw .5vw 1vw black;
+        }
+        #SD3:hover #Apost {
+            animation: Ocult 1s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        #Post img { width:60%; margin:10%; background:white; box-shadow: .5vw .5vw 1vw black;
+        }
+        #Ptit { margin-left:10%; margin-top:-8%;  font-size:1vw; letter-spacing:.1vw;
+        }
+        #Pdesc {
+            margin-left: 10%;
+            font-size: .7vw;
+            letter-spacing: .1vw;
+        }
+        #date { position:relative; color:white; background:black; left:85%; top:-22vw; font-size:.6vw; letter-spacing:.1vw;
+        }
+        #Apost::-webkit-scrollbar {
+            width: 10px;
+            background:black;
+        }
+
+        #Apost::-webkit-scrollbar-thumb {
+            background-color: #3c3c3c
+        }
     </style>
 </head>
 
+
 <body>
-    <div id="main">
-
-        <div id="Ximg">
-            <img src="https://vignette.wikia.nocookie.net/battlefordreamisland/images/2/29/X.gif/revision/latest?cb=20171228121506" />
-        </div> 
-        <div id="Rain">
-            
-            <div id="Rimg">
-                <img src="https://i.postimg.cc/xdsXTGK8/rain-clipart-rain-gif-16.gif" />
+    <div id="Main">
+        <p id="NmeR">xEvangelist</p>
+        <p id="DescR">God´s space and stars</p>
+        <img id="xtlog" src="https://i.postimg.cc/9FmQ1fMP/1.png" />
+        <div id="Stars">
+            <div class="star1" id="S1">
+                <div id="MainBox">
+                    <p class="PLn">α Librae <br />Zubenelgenubi</p>
+                    <div id="L1" class="lns"></div>
+                    <div id="L2" class="lns"></div>
+                    <div id="L3" class="lns"></div>
+                    <div id="L4" class="lns"></div>
+                </div>
+                <div id="Lin1" class="lin"></div><div id="Lin2" class="lin"></div><div id="Lin3" class="lin"></div><img class="bk1" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center1"></div>
             </div>
-            <div id="Xatlogo"><img src="https://i.postimg.cc/9FmQ1fMP/1.png" /></div><div id="Music">
-
-    <div id="MscT"> <p id="Ti">BROKEN WINGS</p></div>
-    <div id="LnG"><div id="Mlin"></div></div><div id="circ2"></div>
-    <div id="Paus"> II</div>
-</div>
-            <div id="imgFil">
-                <img id="imgfl" src="https://i.postimg.cc/K8r7X78q/vignette.png" />  <div id="MnuTxt"><span>XAT</span><span>EDIT</span><span>INVERT</span><span>ABOUT THIS</span></div>
+            <div class="star1" id="S3">
+                <div id="MainBox">
+                    <p class="PLn">β Librae <br />Zubeneschamali</p>
+                    <div id="L1" class="lns"></div>
+                    <div id="L2" class="lns"></div>
+                    <div id="L3" class="lns"></div>
+                    <div id="L4" class="lns"></div>
+                </div><img class="bk1" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center1"></div>
             </div>
-            <div id="Ldesc"><p>𝑪𝒂𝒏 𝒚𝒐𝒖 𝒔𝒂𝒚 𝒘𝒉𝒂𝒕 𝒚𝒐𝒖 𝒅𝒐𝒏'𝒕 𝒌𝒏𝒐𝒘 𝒊𝒏 𝒅𝒂𝒓𝒌𝒏𝒆𝒔𝒔 𝒐𝒇 𝒕𝒉𝒆 𝒔𝒊𝒏𝒏𝒆𝒓?</p></div>
-            <div class="line1" id="ln1">
-                <div class="line" id="Ln2"><a href="https://xat.com/"><div class="Ciric"></div></a>
-                    <div class="line" id="Ln3">
-                        <div class="line" id="Ln4"><a href="https://xat.com/web_gear/chat/editprofile.php?email="><div class="Ciric" id="cir2"></div></a>
-                            <div class="line" id="Ln5">
-                                <div class="line" id="Ln6"><a href="#main"><div class="Ciric" id="cir2"></div></a><a href="#"><div class="Cirice" id="cir2"></div></a>
-                                    <div class="line" id="Ln7">
-                                        <div class="line" id="Ln8"><a href="https://xat.me/xEvangelist"><div class="Ciric"></div></a>
-                                            <div class="line" id="Ln9">
-                                                <div class="line" id="Ln10">
+            <div class="star1" id="S4">
+                <div id="Lin4" class="lin"></div><div id="Lin5" class="lin"></div><div id="MainBox">
+                    <p class="PLn">γ Librae <br /> Zuvenelakrab</p>
+                    <div id="L1" class="lns"></div>
+                    <div id="L2" class="lns"></div>
+                    <div id="L3" class="lns"></div>
+                    <div id="L4" class="lns"></div>
+                </div><img class="bk1" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center1"></div>
+            </div>
 
-                                                    <div class="line" id="ln11">
-                                                        <div class="line" id="Ln12">
-                                                            <div class="line" id="Ln13">
-                                                                <div class="line" id="Ln14">
-                                                                    <div class="line" id="Ln15">
-                                                                        <div class="line" id="Ln16">
-                                                                            <div class="line" id="Ln17">
-                                                                                <div class="line" id="Ln18">
-                                                                                    <div class="line" id="Ln19">
-                                                                                        <div class="line" id="Ln20">
-
-                                                                                            <div class="line" id="ln21">
-                                                                                                <div class="line" id="Ln22">
-                                                                                                    <div class="line" id="Ln23">
-                                                                                                        <div class="line" id="Ln24">
-                                                                                                            <div class="line" id="Ln25">
-                                                                                                                <div class="line" id="Ln26">
-                                                                                                                    <div class="line" id="Ln27">
-                                                                                                                        <div class="line" id="Ln28">
-                                                                                                                            <div class="line" id="Ln29">
-                                                                                                                                <div class="line" id="Ln30">
-
-                                                                                                                                    <div class="line" id="ln31">
-                                                                                                                                        <div class="line" id="Ln32">
-                                                                                                                                            <div class="line" id="Ln33">
-                                                                                                                                                <div class="line" id="Ln34">
-                                                                                                                                                    <div class="line" id="Ln35">
-                                                                                                                                                        <div class="line" id="Ln36">
-                                                                                                                                                            <div class="line" id="Ln37">
-                                                                                                                                                                <div class="line" id="Ln38">
-                                                                                                                                                                    <div class="line" id="Ln39">
-                                                                                                                                                                        <div class="line" id="Ln40">
-
-                                                                                                                                                                            <div class="line" id="ln41">
-                                                                                                                                                                                <div class="line" id="Ln42">
-                                                                                                                                                                                    <div class="line" id="Ln43">
-                                                                                                                                                                                        <div class="line" id="Ln44">
-                                                                                                                                                                                            <div class="line" id="Ln45">
-                                                                                                                                                                                                <div class="line" id="Ln46">
-                                                                                                                                                                                                    <div class="line" id="Ln47">
-                                                                                                                                                                                                        <div class="line" id="Ln48">
-                                                                                                                                                                                                            <div class="line" id="Ln49">
-                                                                                                                                                                                                                <div class="line" id="Ln50">
-
-
-                                                                                                                                                                                                                    <div id="MainP">
-
-                                                                                                                                                                                                                        <div id="RnmD"><p id="Rnm">Kagura</p></div>
-                                                                                                                                                                                                                        <p id="Ds1">[ SINNER | RX-T67 | XXVI | PARADOX]</p>
-                                                                                                                                                                                                                        <div id="ImgDv"><img src="https://vignette.wikia.nocookie.net/battlefordreamisland/images/2/29/X.gif/revision/latest?cb=20171228121506" /></div>
-                                                                                                                                                                                                                        <div id="Desc"></div><p id="dsc">1520048635/KAGURA</p>
-                                                                                                                                                                                                                    </div>
-
-                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                </div>
-                                                                                                                                                                                            </div>
-                                                                                                                                                                                        </div>
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                </div>
-                                                                                                                                                                            </div>
-                                                                                                                                                                        </div>
-                                                                                                                                                                    </div>
-                                                                                                                                                                </div>
-                                                                                                                                                            </div>
-                                                                                                                                                        </div>
-                                                                                                                                                    </div>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="star2" id="S2"><img class="bk2" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center2"></div></div>
+            <div class="star2" id="S5"><div id="Lin7" class="lin"></div><img class="bk2" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center2"></div></div>
+            <div class="star2" id="S6"><img class="bk2" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center2"></div></div>
+            <div class="star2" id="S7"><div id="Lin6" class="lin"></div><img class="bk2" src="https://i.postimg.cc/zGfTGYj5/Png-Item-1325615.png" /> <div class="Center2"></div></div>
+        </div>
+        <div id="Mnu">
+            <div id="Fl"><img id="im1" class="im" src="https://i.postimg.cc/g0ZR3bSR/1.png" /> <img class="im" id="im2" src="https://i.postimg.cc/g0ZR3bSR/1.png" /></div>
+            <div id="Smnu">
+                <div class="Sdiv" id="SD1">
+                    <p class="SDp">About me</p><div class="icon"><img class="Iimg" src="https://i.postimg.cc/pTtvk3v3/stars.png" /></div>
+                    <div id="abMe">
+                        <div id="br"></div>
+                        <div id="prImg"> <img class="NoInvert" src="https://i.postimg.cc/QMqD40Mt/e50d080adfc6cd9c30e68d69eb58813c.jpg" /></div>
+                        <div id="Nmes">Regname / Rnumbr</div>
+                        <div id="desc">
+                            <p>
+                                𝑌𝑜𝑢'𝑣𝑒 𝑎 𝑐𝑜𝑟𝑑𝑖𝑎𝑙 𝑖𝑛𝑣𝑖𝑡𝑎𝑡𝑖𝑜𝑛... 𝐹𝑅𝑂𝑀 𝑇𝐻𝐸 𝐻𝐸𝐿𝐿.
+                                𝐵𝑢𝑟𝑛 𝑦𝑜𝑢𝑟𝑠𝑒𝑙𝑓 𝑓𝑜𝑟 𝑎 𝑤𝘩𝑖𝑙𝑒! 𝑎𝑛𝑑 𝑒𝑛𝑗𝑜𝑦 𝑡𝘩𝑒 𝑝𝑟𝑖𝑐𝑒 𝑓𝑜𝑟 𝑦𝑜𝑢𝑟𝑠 𝑠𝑖𝑛𝑠.
+                            </p>
                         </div>
                     </div>
                 </div>
+                <div class="Sdiv"> <p class="SDp">Edit space</p><div class="icon"><img class="Iimg" src="https://i.postimg.cc/s2bxznrJ/editar-1.png" /></div></div>
+                <div class="Sdiv" id="SD3">
+                    <p class="SDp">Show Posts</p><div class="icon">  <img class="Iimg" src="https://i.postimg.cc/wB1MnCSv/editar-2.png" /></div>
+                    <div id="posts">
+                        <div id="Apost">
+                            <div id="Post"><span id="date">00:00:00</span><img class="NoInvert" src="https://i.postimg.cc/bP41KjHJ/zz.png" /> <p id="Ptit">Title</p><p id="Pdesc">Description</p></div>
+                            <div id="Post"><span id="date">00:00:00</span><img class="NoInvert" src="https://i.postimg.cc/bP41KjHJ/zz.png" /> <p id="Ptit">Title</p><p id="Pdesc">Description</p></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="Sdiv"> <p class="SDp">About this</p><div class="icon"><img class="Iimg" src="https://i.postimg.cc/x8fBk2Gy/2222.png" /></div></div>
+                <div class="Sdiv"> <p class="SDp">Invert?</p> <a href="#"><div id="btnN"></div></a><a href="#Main"><div class="icon"><img class="Iimg" src="https://i.postimg.cc/85W5zhkg/colores-invertidos.png" /></div></a></div>
             </div>
 
         </div>
-    </div> 
+    </div>
 </body>
 </html>
