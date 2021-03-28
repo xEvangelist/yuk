@@ -4,953 +4,1162 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-
     <style>
-        #main, body {
+        body {
             width: 100%;
             height: 100%;
-            background: black;
-            position: absolute;
+            position: fixed;
             margin: 0;
-            font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
-        #R, #B, #G, #P {
-            transition: all .5s ease;
+        a {
+            text-decoration: none;
         }
 
-            /*targets*/
-            #R:target .spn,  #G:target .spn, #B:target .spn {
-                color: white;
-            }
-            /*letter*/
-            #R:target .CLeter {
-                color: #EA4141;
-            }
-            #P:target .CLeter {
-                color: #EAE541;
-            }
-
-            #G:target .CLeter {
-                color: #66EA76;
-            }
-
-            #B:target .CLeter {
-                color: #599DE7;
-            }
-            /*scroll*/
-            #R:target #ContGen::-webkit-scrollbar-thumb, #R:target #posts::-webkit-scrollbar-thumb {
-                background: linear-gradient(360deg, black 43%,#EA4141 43.1%, #EA4141 50%, #EA4141 56.9%, black 57%);
-            }
-            #P:target #ContGen::-webkit-scrollbar-thumb, #P:target #posts::-webkit-scrollbar-thumb {
-                background: linear-gradient(360deg, black 43%,#EAE541 43.1%, #EAE541 50%, #EAE541 56.9%, black 57%);
-            }
-            #G:target #ContGen::-webkit-scrollbar-thumb, #G:target #posts::-webkit-scrollbar-thumb {
-                background: linear-gradient(360deg, black 43%,#66EA76 43.1%, #66EA76 50%, #66EA76 56.9%, black 57%);
-            }
-            #B:target #ContGen::-webkit-scrollbar-thumb, #B:target #posts::-webkit-scrollbar-thumb {
-                background: linear-gradient(360deg, black 43%,#599DE7 43.1%, #599DE7 50%, #599DE7 56.9%, black 57%);
-            }
-          
-            /*backgrounds*/
-            #R:target .CBack {
-                background: #EA4141;
-            }
-
-            #P:target .CBack {
-                background: #EAE541;
-            }
-
-            #G:target .CBack {
-                background: #66EA76;
-            }
-
-            #B:target .CBack {
-                background: #599DE7;
-            }
-
-            /*borders*/
-            #R:target .BordC, #R:target #BordC {
-                border-color: #EA4141;
-               
-            }
-
-            #P:target .BordC, #P:target #BordC {
-                border-color: #EAE541;
-            }
-
-            #G:target .BordC, #G:target #BordC {
-                border-color: #66EA76;
-            }
-
-            #B:target .BordC, #B:target #BordC {
-                border-color: #599DE7;
-            }
-
-
-        #ContGen {
+        #main {
             width: 100%;
-            position: absolute;
-            overflow-y: auto;
-            overflow-x: hidden;
             height: 100%;
+            position: fixed;
+            background: #171717;
             margin: 0;
-            padding: 0;
-            perspective: 1px;
-            transform-style: preserve-3d;
+            overflow: hidden;
+            transition: all 1s ease;
+            cursor: crosshair;
         }
 
-            #ContGen::-webkit-scrollbar {
-                width: .5vw;
-                background-color: black;
-                transition: all .5s ease;
-            }
-
-
-            #ContGen::-webkit-scrollbar-thumb {
-                transition: all .5s ease;
-                border-radius: .5vw;
-                /*background: lightgray;*/
-                border: .1vw solid black;
-                /*-webkit-box-shadow: inset 0 0 6px gray;*/
-                background: linear-gradient(360deg, black 43%,darkgray 43.1%, darkgray 50%, darkgray 56.9%, black 57%);
-            }
-
-        /*#ContGen::-webkit-scrollbar-thumb:active {
-                    width: 1vw;
-                    background: linear-gradient(360deg, black 43%, #be4343 43.1%, #be4343 50%, #be4343 56.9%, black 57%);
-                }*/
-
-
-        #Back {
-            box-sizing: border-box;
-            min-height: 100vh;
-            position: relative;
-            transform-style: inherit;
-            width: 100vw;
-            text-align: center;
-        }
-
-            #Back,
-            #Back:before {
-                background: 50% 50% / cover;
-            }
-
-                #Back::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    display: block;
-                    background: url(https://i.postimg.cc/r8ddS7fg/3035.jpg);
-                    background-size: cover;
-                    transform-origin: center center 0;
-                    transform: translateZ(-1px) scale(2);
-                    z-index: -1;
-                    min-height: 100vh;
-                }
-
-        #Cont {
-            z-index: 2;
+        #sM {
+            width: 94%;
+            height: 90%;
             position: absolute;
-            top: 120%;
-            height: 70%;
-            background: black;
-            font-weight: lighter;
-            padding: 40px;
-            width: 100%;
-            color: grey;
-        }
-
-        #Name {
-            width: 70%;
-            height: 20%;
-            left: 15%;
-            position: absolute;
-            top: 45%;
-            text-align: center;
-            color: white;
-        }
-
-        #Title {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-
-        #Rnick {
-            letter-spacing: 1.2vw;
-            font-size: 4vw;
-            /*background: rgba(0,0,0,.1);*/ filter: blur(1px);
-            transition: all .5s ease;
-            font-weight:lighter;
-            text-shadow: .5vw .5vw .5vw black;
-        }
-
-            #Rnick:hover {
-                letter-spacing: 1.5vw;
-                filter: blur(0px);
-            }
-
-        #RnmeRnmb {
-            letter-spacing: .2vw;
-            font-size: .8vw;
-            text-shadow: .5vw .5vw .5vw black;
-        }
-            #RnmeRnmb:nth-child(3) { color:lightgray; letter-spacing:.15vw; font-size:.7vw;
-            }
-
-        #mnu {
-            position: absolute;
-            width: 25%; z-index:90;
-            height: 100%;
             background: white;
-            left: -25%;
-            transition: all .5s ease; 
+            left: 3%;
+            top: 5%;
+            animation: Occ 1s 1;
+            z-index: 12;
+            animation-delay: 5.5s;
+            animation-fill-mode: forwards;
+            border-bottom: .1vw solid #171717;
+            border-radius: 0 0 .5vw .5vw;
         }
-            #mnu:hover #btn { background:white;
+
+        @keyframes Appr {
+            0% {
+                opacity: 1;
+                z-index: 999;
             }
-            #mnu:hover #cog {
-                filter: invert(100%);
+
+            100% {
+                opacity: 1;
+                z-index: 999;
             }
-         
-        #btn {
-            width: 3vw;
-            height: 3vw;
+        }
+
+        #ocult {
             position: absolute;
-            left: 100%;
-            transition: all .5s ease; border-radius: 0 .5vw .5vw 0;
+            width: 100%;
+            height: 5%;
+            background: #171717;
+            z-index: 9999;
         }
 
-            #btn img {
-                width: 2vw;
-                height: 2vw;
-                margin: .5vw;
-                border-radius: 50%;
+        #ocult2 {
+            position: absolute;
+            width: 100%;
+            height: 5%;
+            bottom: 0;
+            background: #171717;
+            z-index: 9999;
+        }
+
+        #conT {
+            color: #ff1700;
+            font-size: 1.3vw;
+            letter-spacing: .2vw;
+            font-weight: bold;
+            position: absolute;
+            z-index: 10;
+            left: 48.5%;
+            top: 55%;
+            filter: blur(.5px);
+        }
+
+
+
+
+            #conT:before {
+                content: '0%';
+                animation: timer 5s 1;
+                animation-fill-mode: forwards;
             }
 
-        #cog {
-            filter: contrast(10000%);
+        #imj {
+            width: 15%;
+            position: absolute;
+            left: 42%;
+            top: 44%;
+            z-index: 9;
         }
 
-        #R:target .ImgCl, #R:target #mnu:hover #cog {
-            filter: contrast(0%) sepia(1) hue-rotate(330deg) saturate(1700%) grayscale(60%);
+        #Nme {
+            width: 20%;
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            z-index: 11;
         }
 
-        #B:target .ImgCl, #B:target #mnu:hover #cog {
-            filter: contrast(0%) sepia(1) hue-rotate(20deg) saturate(1000%) invert(100%) grayscale(50%);
+        @keyframes Occ {
+            0% {
+                top: 0;
+            }
+
+            100% {
+                top: -100%;
+            }
         }
 
-        #G:target .ImgCl, #G:target #mnu:hover #cog {
-            filter: contrast(400%) sepia(1) hue-rotate(220deg) saturate(1500%) invert(100%)grayscale(50%) brightness(200%);
+
+
+        @keyframes timer {
+            1% {
+                content: '01%';
+            }
+
+            2% {
+                content: '02%';
+            }
+
+            3% {
+                content: '03%';
+            }
+
+            4% {
+                content: '04%';
+            }
+
+            5% {
+                content: '05%';
+            }
+
+            6% {
+                content: '06%';
+            }
+
+            7% {
+                content: '07%';
+            }
+
+            8% {
+                content: '08%';
+            }
+
+            9% {
+                content: '09%';
+            }
+
+            10% {
+                content: '10%';
+            }
+
+            14% {
+                content: '11%';
+            }
+
+            14.2% {
+                content: '12%';
+            }
+
+            14.3% {
+                content: '13%';
+            }
+
+            14.5% {
+                content: '14%';
+            }
+
+            15% {
+                content: '15%';
+            }
+
+            16% {
+                content: '17%';
+            }
+
+            21% {
+                content: '18%';
+            }
+
+            21.1% {
+                content: '19%';
+            }
+
+            22.5% {
+                content: '20%';
+            }
+
+            22.6% {
+                content: '21%';
+            }
+
+            22.8% {
+                content: '22%';
+            }
+
+            23% {
+                content: '23%';
+            }
+
+            24% {
+                content: '24%';
+            }
+
+            25% {
+                content: '25%';
+            }
+
+            26% {
+                content: '26%';
+            }
+
+            27% {
+                content: '27%';
+            }
+
+            28% {
+                content: '28%';
+            }
+
+            29% {
+                content: '29%';
+            }
+
+            30% {
+                content: '30%';
+            }
+
+            31% {
+                content: '31%';
+            }
+
+            32% {
+                content: '32%';
+            }
+
+            33% {
+                content: '33%';
+            }
+
+            34% {
+                content: '34%';
+            }
+
+            35% {
+                content: '35%';
+            }
+
+            36% {
+                content: '36%';
+            }
+
+            37% {
+                content: '37%';
+            }
+
+            38% {
+                content: '38%';
+            }
+
+            39% {
+                content: '39%';
+            }
+
+            40% {
+                content: '40%';
+            }
+
+            41% {
+                content: '41%';
+            }
+
+            42% {
+                content: '42%';
+            }
+
+            43% {
+                content: '43%';
+            }
+
+            44% {
+                content: '44%';
+            }
+
+            45% {
+                content: '45%';
+            }
+
+            46% {
+                content: '46%';
+            }
+
+            47% {
+                content: '47%';
+            }
+
+            48% {
+                content: '48%';
+            }
+
+            49% {
+                content: '49%';
+            }
+
+            50% {
+                content: '50%';
+            }
+
+            51% {
+                content: '51%';
+            }
+
+            52% {
+                content: '52%';
+            }
+
+            53% {
+                content: '53%';
+            }
+
+            54% {
+                content: '54%';
+            }
+
+            55% {
+                content: '55%';
+            }
+
+            56% {
+                content: '56%';
+            }
+
+            57% {
+                content: '57%';
+            }
+
+            58% {
+                content: '58%';
+            }
+
+            59% {
+                content: '59%';
+            }
+
+            60% {
+                content: '60%';
+            }
+
+            61% {
+                content: '61%';
+            }
+
+            62% {
+                content: '62%';
+            }
+
+            63% {
+                content: '63%';
+            }
+
+            64% {
+                content: '64%';
+            }
+
+            65% {
+                content: '65%';
+            }
+
+            66% {
+                content: '66%';
+            }
+
+            67% {
+                content: '67%';
+            }
+
+            68% {
+                content: '68%';
+            }
+
+            69% {
+                content: '69%';
+            }
+
+            70% {
+                content: '70%';
+            }
+
+            71% {
+                content: '71%';
+            }
+
+            72% {
+                content: '72%';
+            }
+
+            73% {
+                content: '73%';
+            }
+
+            74% {
+                content: '74%';
+            }
+
+            75% {
+                content: '75%';
+            }
+
+            76% {
+                content: '76%';
+            }
+
+            77% {
+                content: '88%';
+            }
+
+            78% {
+                content: '78%';
+            }
+
+            79% {
+                content: '79%';
+            }
+
+            80% {
+                content: '80%';
+            }
+
+            81% {
+                content: '81%';
+            }
+
+            82% {
+                content: '82%';
+            }
+
+            83% {
+                content: '83%';
+            }
+
+            84% {
+                content: '84%';
+            }
+
+            85% {
+                content: '85%';
+            }
+
+            86% {
+                content: '86%';
+            }
+
+            86.1% {
+                content: '87%';
+            }
+
+            86.2% {
+                content: '88%';
+            }
+
+            86.3% {
+                content: '89%';
+            }
+
+            86.4% {
+                content: '90%';
+            }
+
+            86.5% {
+                content: '91%';
+            }
+
+            86.6% {
+                content: '92%';
+            }
+
+            86.7% {
+                content: '93%';
+            }
+
+            86.8% {
+                content: '94%';
+            }
+
+            87% {
+                content: '95%';
+            }
+
+            88% {
+                content: '96%';
+            }
+
+            89% {
+                content: '97%';
+            }
+
+            90% {
+                content: '98%';
+            }
+
+            91% {
+                content: '99%';
+            }
+
+            100% {
+                content: '100%';
+                left: 48%;
+            }
         }
 
-        #G:target #logimg {
-            filter: contrast(900%) sepia(1) hue-rotate(220deg) saturate(9000%) invert(100%) grayscale(60%) brightness(200%);
+        #M {
+            width: 93%;
+            height: 87%;
+            border-top: 1vh solid white;
+            border-bottom: 1vh solid white;
+            border-left: .5vw solid white;
+            border-right: .5vw solid white;
+            position: absolute;
+            background: white;
+            left: 3%;
+            top: 6%;
+            z-index: 9;
+            overflow: hidden;
         }
 
-        #P:target .ImgCl, #P:target #mnu:hover #cog {
-            filter: contrast(40%) sepia(1) hue-rotate(20deg) saturate(1000%) grayscale(30%);
+        #Dfrd {
+            position: absolute;
+            width: 35%;
+            height: 106%;
+            left: 65%; background:white;
+            top: -100%;
+            transition: all 1s ease; z-index:3;
         }
 
-        #mnu:hover {
-            left: 0;
+        #Fl {
+            position: absolute;
+            width: 100%;
+            height: 5.7%;
+            background: linear-gradient(-45deg, #FF1F00, #FF4D00, #FF009B, #FF0042);
+            background-size: 200% 200%;
+            animation: gradient 10s ease infinite;
+            bottom: 0;
+            z-index: 99;
+        }
+
+        #Dfrd:hover {
+            top: 0;
+        }
+
+        #Over {
+            position: absolute;
+            width: 35%;
+            height: 94%;
+            background: linear-gradient(-45deg, #FF1F00, #FF4D00, #FF009B, #FF0042);
+            background-size: 200% 200%;
+            animation: gradient 10s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 75%;
+            }
+
+            33% {
+                background-position: 100% 0%;
+            }
+
+            80% {
+                background-position: 25% 100%;
+            }
+
+            100% {
+                background-position: 0% 75%;
+            }
+        }
+
+        #LFrds {
+            position: absolute;
+            width: 65%;
+            height: 100%;
+            left: 35%;
+            overflow: hidden;
+        }
+
+        #Slid {
+            position: absolute;
+            height: auto;
+            width: 100%;
+            animation: Sldir 25s infinite;
+            -webkit-animation-timing-function: linear;
+        }
+
+        .Friend {
+            width: 15vw;
+            height: 15vw;
+            background: linear-gradient(65deg, #FF1F00, #FF4D00, #FF009B, #FF0042);
+            background-size: 200% 200%;
+            animation: gradient 5s ease infinite;
+            margin-bottom: 1.5vw;
+            margin-left: 3vw;
+            position: relative;
+            margin-top: 1.5vw;
+        }
+
+            .Friend:hover {
+                animation: bounce .1s 1;
+            }
+
+
+        @keyframes bounce {
+            0% {
+                width: 15vw;
+                height: 15vw;
+            }
+
+            50% {
+                width: 16vw;
+                height: 16vw;
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+                margin-left: 2.5vw;
+            }
+
+            100% {
+                margin-bottom: 1.5vw;
+                margin-top: 1.5vw;
+                margin-left: 3vw;
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+
+        #Slid:hover {
+            -webkit-animation-play-state: paused;
+        }
+
+        @keyframes Sldir {
+            0% {
+                top: 100%;
+            }
+
+            100% {
+                top: -270%;
+            }
+        }
+
+        #pVr {
+            cursor: wait;
+            width: 80%;
+            overflow: hidden;
+            height: 0%;
+            background: rgba(0,0,0,.7);
+            border: .1vw solid white;
+            position: absolute;
+            left: 10%;
+            top: 40%;
+            text-align: center;
+            animation: entr2 1s 1;
+        }
+
+        #Dfrd:hover #pVr {
+            animation: entr 1s 1;
+            animation-delay: .5s;
+            animation-fill-mode: forwards;
+        }
+
+        #pVr p {
+            margin-top: 2vw;
+            font-size: .8vw;
+            letter-spacing: .2vw;
+            color: white;
+            padding: 1vw;
+            text-transform: uppercase;
+        }
+
+        @keyframes entr {
+            0% {
+                height: 0;
+            }
+
+            100% {
+                height: 20%;
+            }
+        }
+
+        @keyframes entr2 {
+            0% {
+                height: 20%;
+            }
+
+            100% {
+                height: 0;
+            }
+        }
+
+        .Bf1 {
+            width: 90%;
+            height: 90%;
+            margin: 5%;
+            background: white;
+            position: relative;
+            top: 5%;
+            border: .1vw solid rgba(52,3,142,.2);
+        }
+
+        #imgBkF {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            position: absolute;
+            filter: contrast(200%);
         }
 
         #filter {
             position: absolute;
+            background: rgba(52,3,142,.2);
             width: 100%;
-            height: 120%;
-            background-image: url(https://i.postimg.cc/k56XK2Pq/original.gif);
-            opacity: 1;
+            height: 100%;
+            z-index: 2;
         }
 
-        #ImgPr {
+        .Friend:hover #Atex {
+            animation: osc 1.5s 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes osc {
+            0% {
+                background: rgba(52,3,142,.0);
+            }
+
+            49% {
+                background: rgba(52,3,142,.0);
+            }
+
+            80% {
+                background: rgba(52,3,142,.2);
+            }
+
+            100% {
+                background: rgba(52,3,142,.2);
+            }
+        }
+
+        @keyframes osc2 {
+            0% {
+                background: rgba(52,3,142,.2);
+            }
+
+            49% {
+                background: rgba(52,3,142,.2);
+            }
+
+            80% {
+                background: rgba(52,3,142,.0);
+            }
+
+            100% {
+                background: rgba(52,3,142,.0);
+            }
+        }
+
+        #Atex {
+            width: 90%;
+            height: 90%;
             position: absolute;
-            width: 9vw;
-            height: 9vw;
-            left: 15%;
-            background: white;
-            top: -6vw;
-            border-radius: 50%;
-            border: .5vw solid white;
-            overflow: hidden;
+            top: 5%;
+            left: 5%;
+            background: rgba(52,3,142,.0);
+            animation: osc2 1s 1;
+            z-index: 3;
         }
 
-            #ImgPr img {
+        #Pnum {
+            width: 0%;
+            overflow: hidden;
+            color: white;
+            font-size: 2.5vw;
+            position: absolute;
+            text-shadow: .3vw .3vw .3vw black;
+        }
+
+        #Pnme {
+            width: 0%;
+            overflow: hidden;
+            position: absolute;
+            color: white;
+            top: 5vw;
+            font-size: 3vw;
+            text-shadow: .3vw .3vw .3vw black;
+        }
+
+        #pdte {
+            width: 0%;
+            overflow: hidden;
+            position: absolute;
+            color: white;
+            top: 11vw;
+            font-size: .9vw;
+            letter-spacing: .1vw;
+            text-shadow: .3vw .3vw .3vw black;
+        }
+
+        @keyframes wid {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes widof {
+            0% {
                 width: 100%;
             }
 
-        #PrfDt {
-            position: absolute;
-            width: 60%;
-            height: 8vw;
-            left: 25%;
-            top: -6vw;
-        }
-
-        #tt {
-            position: absolute;
-            left: 5%;
-            top: 35%;
-            font-size: 2vw;
-            color: white;
-            letter-spacing: .3vw;
-        }
-
-        #Amnu {
-            position: absolute;
-            top: 80%;
-            height: 20%;
-            width: 100%;
-        }
-
-        #Log {
-            position: absolute;
-            width: 20%;
-            height: 15%;
-            left: 40%;
-            top: 15%;
-        }
-
-            #Log img {
-                width: 40%;
-                left: 30%;
-                position: absolute;
+            100% {
+                width: 0%;
             }
-
-        #cong {
-            position: absolute;
-            width: 10%;
-            height: 100%;
-            left: 24.5%;
-            border-right: .1vw solid white;
         }
 
-            #cong:hover #ConIm {
-                transform: rotate(90deg);
-            }
-
-        .Mnux:hover #ConIm2 {
-            transform: rotate(90deg);
-            left: 4%;
+        .wid {
+            animation: widof 1s 1;
         }
 
-        #cong:hover #ConIm:nth-child(2) {
-            top: 0;
-            left: 75%;
+        .Friend:hover .wid {
+            animation: wid 1s 1;
+            animation-delay: .7s;
+            animation-fill-mode: forwards;
         }
 
-        .Mnux:hover #ConIm2:nth-child(2) {
-            top: 0;
-        }
-
-        #TConf, #TConf2 {
+        #Fl p {
+            text-align: center;
+            font-size: .9vw;
             color: white;
             letter-spacing: .1vw;
-            font-size: .6vw;
-            margin: 0;
-            padding: .5vw;
-            transition: all .5s ease;
         }
 
-        #TConf2 {
-            margin-left: 2vw;
+        #MainImg {
+            width: 12vw;
+            height: 12vw;
+            top: 17%;
+            position: absolute;
+            left: 8%;
+            z-index: 3;
         }
 
-            #TConf:hover, #TConf2:hover {
-                letter-spacing: .15vw;
+            #MainImg img {
+                width: 100%;
             }
 
-        #ConIm {
-            width: 1vw;
-            height: 1vw;
+        #Tnme {
+            width: 12vw;
+            height: 2vw;
+            top: 11%;
             position: absolute;
-            left: 75%;
-            top: 20%;
-            transition: all .5s ease;
+            left: 8%;
         }
 
-            #ConIm:nth-child(2) {
-                left: 79%;
-            }
-
-        #ConIm2 {
-            width: 1vw;
-            height: 1vw;
+        #kg {
+            font-size: 1.7vw;
+            text-align: center;
+            font-family: 'Agency FB';
+            letter-spacing: .1vw;
+            color: black;
             position: absolute;
-            left: 0;
-            transform: rotate(180deg);
-            top: 20%;
-            transition: all .5s ease;
-        }
-
-            #ConIm2:nth-child(2) {
-                left: 4%;
-            }
-
-        #ConfClrs {
-            width: 10vw;
-            height: 0vh;
-            background: rgba(255,255,255,.1);
-            position: absolute;
-            right: -1%;
-            border-right: .1vw solid white;
-            transition: all 1s ease;
-            overflow: hidden;
-        }
-
-        #cong:hover #ConfClrs {
-            height: 70vh;
-        }
-
-        #Sl {
-            position: absolute;
-            overflow: auto;
-        }
-
-        #Fr {
-            width: 9vw;
-            margin-top: 10%;
-            margin-left: .5vw;
-            border-bottom: .1vw solid white;
-            height: 4vw;
-        }
-
-            #Fr img {
-                width: 3vw;
-                border:.1vw solid white;
-            }
-
-       
-
-        .Mnux {
-            position: absolute;
-            margin-left: 1vw;
+            background: darkgray;
             width: auto;
             height: 100%;
+            left: 10%;
         }
 
-            .Mnux:nth-child(2) {
-                margin-left: 7vw;
-            }
-
-            .Mnux:nth-child(4) {
-                margin-left: 53.9vw;
-                border-left: .1vw solid white;
-            }
-
-        #btn1 {
+        #sn {
+            font-size: 1.3vw;
+            letter-spacing: .1vw;
+            text-align: center;
+            font-family: 'Agency FB';
+            font-weight: bold;
+            color: #FF009B;
+            top: -.9vw;
             position: absolute;
-            width: 10vw;
-            height: 3.5vw;
-            background: white;
-            left: 31%;
-            top: 16.5vw;
-            border-radius: 2vw;
-            transition: all .5s ease;
-        }
-
-            #btn1 span {
-                color: black;
-                font-size: .8vw; text-shadow: 0 0 .5vw black; font-weight:bold;
-            }
-
-
-        #sp2, #sp4 {
-            margin-right: .3vw;
-        }
-
-        #sp1:before {
-            content: 'G';
-        }
-
-        #sp2:before {
-            content: 'O ';
-        }
-
-        #sp3:before {
-            content: 'T';
-        }
-
-        #sp4:before {
-            content: 'O ';
-        }
-
-        #sp5:before {
-            content: 'H';
-        }
-
-        #sp6:before {
-            content: 'E';
-        }
-
-        #sp7:before {
-            content: 'L';
-        }
-
-        #sp8:before {
-            content: 'L';
-        }
-
-        #btn1:hover #sp1:before {
-            animation: Sp1 .4s infinite;
-        }
-
-        #btn1:hover #sp3::before {
-            animation: Sp3 .7s infinite;
-        }
-
-        #btn1:hover #sp4::before {
-            animation: Sp4 .2s infinite;
-        }
-
-        #btn1:hover #sp6::before {
-            animation: Sp6 .8s infinite;
-        }
-
-        #btn1:hover #sp7::before {
-            animation: Sp7 .4s infinite;
-        }
-
-        @keyframes Sp1 {
-            0% {
-                content: '9';
-            }
-
-            20% {
-                content: 'J';
-            }
-
-            40% {
-                content: '0';
-            }
-
-            60% {
-                content: 'R';
-            }
-
-            100% {
-                content: 'T';
-            }
-        }
-
-        @keyframes Sp3 {
-            0% {
-                content: 'K';
-            }
-
-            20% {
-                content: 'Z';
-            }
-
-            40% {
-                content: '5';
-            }
-
-            60% {
-                content: 'Q';
-            }
-
-            100% {
-                content: 'N';
-            }
-        }
-
-        @keyframes Sp4 {
-            0% {
-                content: 'L';
-            }
-
-            20% {
-                content: '7';
-            }
-
-            40% {
-                content: '2';
-            }
-
-            60% {
-                content: 'X';
-            }
-
-            100% {
-                content: 'V';
-            }
-        }
-
-        @keyframes Sp6 {
-            0% {
-                content: '3';
-            }
-
-            20% {
-                content: 'Z';
-            }
-
-            40% {
-                content: 'K';
-            }
-
-            60% {
-                content: 'B';
-            }
-
-            100% {
-                content: 'P';
-            }
-        }
-
-        @keyframes Sp7 {
-            0% {
-                content: '1';
-            }
-
-            20% {
-                content: 'G';
-            }
-
-            40% {
-                content: 'H';
-            }
-
-            60% {
-                content: '6';
-            }
-
-            100% {
-                content: 'M';
-            }
-        }
-
-        #btn2 {
-            position: absolute;
-            width: 9.6vw;
-            border: .2vw solid white;
-            height: 3.1vw;
+            width: auto;
             left: 50%;
-            top: 16.5vw;
-            border-radius: 2vw;
-            transition: all .5s ease;
-        }
-        #spans { width:90%; height:1vw; position:absolute; top:1vw; left:5%; 
-        }
-      
-        #logmnu { width:8vw; position:absolute; top:5%; left:35%;
-        }
-        #Sub { position:absolute; color:white; letter-spacing:.3vw; font-size:.9vw; top:32%; left:44%;
-        }
-        #MnuRnm {
-            letter-spacing: .2vw;
-            font-size: .8vw;
-            text-shadow: .5vw .5vw .5vw black;
-            margin-top: 50%;
-            color: dimgray;
-        }
-        #Atheme { width:80%; left:8%; position:absolute;
-        }
-        #Axat {
-            width: 80%;
-            left: 8%; top:60%; 
-            position: absolute;
-        }
-        .cicl, .cicl2 {
-            border: .01vw solid black;
-            width: .9vw;
-            height: .9vw;
-            float: left;
-            margin-left: 1vw;
-            margin-top: 40%;
-            border-radius: 50%;
-            filter: blur(1px);
-        }
-        .cicl2 {
-            width: 1vw;
-            height: 1vw; background:black;
-            filter: blur(.5px);
-        }
-        #Nrm {
-            margin-left: 5.5vw;
-            background: white;
-          
-        }
-        #rd {
-            background: #EA4141;
-        }
-        #py {
-            background: #EAE541;
-        }
-        #bl {
-            background: #599DE7;
-        }
-        #gr {
-            background: #66EA76;
-        }
-        #fot { width:100%; height:5%; position:absolute; top:95%; background:rgba(0,0,0,.8);
-        }
-        #xt1 { margin-left:20%;
-        }
-        .cicl2 { overflow:hidden;
-        }
-        .cicl2 img { position:absolute; width:1vw; left:-.02vw;
-        }
-        #Amusic {
-            position: absolute;
-            width: 28%;
-            height: 10%;
-            top: 91%;
-            left: 15%;
-            background: red;
-        }
-        #Aforum::-webkit-scrollbar {
-            height: .3vw;
-            width: .2vw;
-            
-        }
-        #Aforum::-webkit-scrollbar-thumb {
-            background: #599DE7
-        }
-        #Aforum {
-            position: absolute;
-            width: 20vw;
-            height: 61%;
-            top: 25%;
-            left: 15%;
-            overflow:auto; overflow-x:hidden;
-          border-bottom:.2vw solid dimgray;
-        }
-        #Lpost { width:100%; height:15%;  margin-bottom:1vw; 
-        }
-        #Upost {
-            width: 80%;
-            height: 15%;
-            margin-bottom: 1vw;
-            margin-left: 20%;
-        }
-       #imgL { width:3vw; height:3vw; border:.1vw solid white; margin:.2vw;
-        } 
-        #TextAr { width:80%; height:15%; margin-left:20%;  position:absolute; margin-top:-18%;
-        }
-        #Ptit {
-            position: absolute;
-            font-size: .8vw;
-            color: #599DE7;
-            top: -20%; 
-            letter-spacing: .1vw;
-        }
-        #Pte {
-            position: absolute;
-            font-size: .6vw; letter-spacing:.1vw;
-            color: gray; margin-top:1vw;
-        }
-        #tim { position:absolute; font-size:.6vw; letter-spacing:.1vw; margin-top:18%;
-        }
-        #lik { color:#599DE7;
-        }
-        #imgLik { position:absolute; width:.8vw; left:40%; margin-top:16.6%;
-        }
-        #numlik {
-            position: absolute;
-            font-size: .6vw;
-            letter-spacing: .1vw;
-            margin-top: 18%; left:50%;
-        }
-        #apost {
-            position: absolute;
-            background: black;
-            width: 30%;
-            height: 90vh;
-            left: 46%;
-            top: -7%;
-        }
-        #posts::-webkit-scrollbar { width:.5vw;
-          background:black;
-        }
-        #posts::-webkit-scrollbar-thumb {
-            background: linear-gradient(360deg, black 43%,darkgray 43.1%, darkgray 50%, darkgray 56.9%, black 57%);
-        }
-        #posts { position:absolute; width:98%; height:96%; top:2%;  left:2%; overflow:auto;
-        }
-        #post { width:90%; height:auto; border-bottom:.1vw solid gray; margin-left:3%;  margin-bottom:10%;
-        }
-        #Postimg { width:80%; border-left:.5vw solid gray; margin-left:8%; border-radius:1vw .5vw 0 .2vw;
-        }
-        #Ded { font-size:.6vw; letter-spacing:.1vw; color:lightgray;
-        }
-        #Dtit { color:white; text-decoration:underline; font-size:.8vw; letter-spacing:.15vw;
         }
 
+        #Eq {
+            width: 12vw;
+            height: 40%;
+            position: absolute;
+            top: 46%;
+            left: 8%;
+        }
+
+        .bar {
+            width: .5vw;
+            height: 99%;
+            background: linear-gradient(-45deg, #FF1F00, #FF4D00, #FF009B, #FF0042);
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+            margin-left: .7vw;
+            float: left;
+        }
+
+        #bar1 {
+            margin-left: 1.4vw;
+            animation: B1 .5s ease infinite;
+        }
+
+        #bar11 {
+            animation: B1 .5s ease infinite;
+        }
+
+        #bar2 {
+            animation: B2 .5s ease infinite;
+        }
+
+        #bar3 {
+            animation: B3 .5s ease infinite;
+        }
+
+        #bar4 {
+            animation: B4 .5s ease infinite;
+        }
+
+        #bar5 {
+            animation: B5 .5s ease infinite;
+        }
+
+        @keyframes B1 {
+            0% {
+                height: 70%;
+            }
+
+            25% {
+                height: 40%;
+            }
+
+            50% {
+                height: 60%;
+            }
+
+            75% {
+                height: 20%;
+            }
+
+            100% {
+                height: 50%;
+            }
+        }
+
+        @keyframes B2 {
+            10% {
+                height: 80%;
+            }
+
+            40% {
+                height: 50%;
+            }
+
+            60% {
+                height: 70%;
+            }
+
+            90% {
+                height: 30%;
+            }
+
+            120% {
+                height: 60%;
+            }
+        }
+
+        @keyframes B3 {
+            15% {
+                height: 60%;
+            }
+
+            35% {
+                height: 80%;
+            }
+
+            65% {
+                height: 40%;
+            }
+
+            85% {
+                height: 90%;
+            }
+
+            100% {
+                height: 40%;
+            }
+        }
+
+        @keyframes B4 {
+            0% {
+                height: 40%;
+            }
+
+            35% {
+                height: 60%;
+            }
+
+            65% {
+                height: 100%;
+            }
+
+            85% {
+                height: 50%;
+            }
+
+            100% {
+                height: 70%;
+            }
+        }
+        @keyframes B5 {
+            15% {
+                height: 70%;
+            }
+
+            50% {
+                height: 90%;
+            }
+
+            60% {
+                height: 100%;
+            }
+
+            80% {
+                height: 50%;
+            }
+
+            100% {
+                height: 100%;
+            }
+        }
+
+        #Abtme { width:6%; height:12vw; position:absolute; top:17%;  left:1%;
+        }
+        .Abt {
+            width: 90%;
+            height: 20%; text-align:center;
+            margin-top: .5vw;
+            margin-left: 10%;
+            background: linear-gradient(25deg, #FF1F00, #FF4D00, #FF009B, #FF0042);
+            background-size: 200% 200%;
+            animation: gradient 5s ease infinite;
+        }
+            .Abt span { font-size:.65vw; letter-spacing:.1vw;  color:white; position:relative; top:.3vw;
+            }
+        #imgs {
+            width: 35%; top:10%;
+            height: 90%; z-index:1;
+            right: 0;
+            position: absolute;
+            background: linear-gradient(25deg, #FF1F00, #FF4D00, #FF009B, #FF0042);
+            background-size: 200% 200%;
+            animation: gradient 5s ease infinite;
+        }
+        #Aimgs { position:absolute; width:99%; height:99%; left:.5%; background:white; top:.5%;
+        }
     </style>
 </head>
-<body> 
+<body>
+    
     <div id="main">
-        <div id="R">
-            <!--red-->
-
-            <div id="P">
-                <!--yellow-->
-
-                <div id="B">
-                    <!--blue-->
-                    <div id="G">
-                        <!--green-->
-                        <div id="ContGen">
-
-                            
-                            <div id="Back">
-                                <div id="filter"></div>
-                                <div id="mnu">
-                                    <div id="btn"><img id="cog" class="ImgCl" src="https://i.postimg.cc/85X2HHRY/93831206single-gear-cog-animation-1-2.gif" /></div>
-
-                                    <img id="logmnu" src="https://i.postimg.cc/FRXP7C9c/rombo.png" />
-                                    <p id="MnuRnm">
-                                        | Demanufacture |
-                                    </p>
-
-                                    <div id="Atheme">
-
-                                        <a href="#"><div class="cicl" id="Nrm"></div></a>
-                                        <a href="#R"><div class="cicl" id="rd"></div></a>
-                                        <a href="#P"><div class="cicl" id="py"></div></a>
-                                        <a href="#B"><div class="cicl" id="bl"></div></a>
-                                        <a href="#G"><div class="cicl" id="gr"></div></a>  <p id="MnuRnm">
-                                            | Select Your Theme |
-                                        </p>
-                                    </div>
-                                    <div id="Axat">
-
-                                        <a href="https://xat.com/web_gear/chat/editprofile.php?email="><div class="cicl2" id="xt1"> <img src="https://i.postimg.cc/SNBLkTmp/edit.png" /></div></a>
-
-
-                                        <a href="https://xat.wiki/Main_Page"><div class="cicl2"> <img src="https://i.postimg.cc/nL5PJKSj/3670367.png" /></div></a>
-                                        <a href="https://forum.xat.com/"><div class="cicl2"> <img src="https://i.postimg.cc/VkfTBkb6/126500.png" /></div></a>
-                                        <a href="https://xat.com/tools#!privacy"><div class="cicl2"> <img src="https://i.postimg.cc/QxftqVnY/can.png" /></div></a>
-                                        <a href="https://xat.com/tools#!terms"><div class="cicl2"><img src="https://i.postimg.cc/52jtK1h4/ter.png" /></div></a>
-                                        <a href="https://xat.com/report#!user&UserName="><div class="cicl2"><img src="https://i.postimg.cc/Cxc2vpj4/660252.png" /></div></a>
-                                        <p id="MnuRnm">
-                                            | Xat options |
-                                        </p>
-                                    </div>
-                                    <div id="fot"></div>
-                                </div>
-
-                                <div id="Log">
-                                    <img id="logimg" class="ImgCl" src="https://i.postimg.cc/6qYGxqjq/rombo.png" />
-                                </div>
-                                <p id="Sub">
-                                    | Demanufacture |
-                                </p>
-                                <div id="Name">
-                                    <span id="Rnick" class="CLeter">MechanizeDoLL</span>
-
-
-                                    <p id="RnmeRnmb">
-                                        Lala | Shitposter | Alcoholic | Blissful
-                                    </p>
-                                    <p id="RnmeRnmb">Give me a reason 'Cause i got nothing to gain... So what am i doing now?.</p>
-                                    <div id="btn1" class="CBack">
-                                        <div id="spans">
-                                            <span class="spn" id="sp1"></span>
-                                            <span class="spn" id="sp2"></span>
-                                            <span class="spn" id="sp3"></span>
-                                            <span class="spn" id="sp4"></span>
-                                            <span class="spn" id="sp5"></span>
-                                            <span class="spn" id="sp6"></span>
-                                            <span class="spn" id="sp7"></span>
-                                            <span class="spn" id="sp8"></span>
-                                        </div>
-
-                                    </div>
-
-                                    <div id="btn2" class="BordC"></div>
-                                </div>
-                            </div>
-
-                            <div id="Cont">
-                                <div id="ImgPr" class="BordC"><img src="https://i.postimg.cc/bwjdSddF/Screenshot-6.png" /></div> <div id="PrfDt"><div id="TextTit"><span id="tt"  class="CLeter">MechanizeDoll</span> <span>Demanufacture</span></div>
-                                                                                                                                   <div id="Amnu">
-                                                                                                                                       <div class="Mnux"> <p id="TConf"  class="CLeter">FIND ME</p></div>
-                                                                                                                                       <div class="Mnux"> <p id="TConf"  class="CLeter">MUSIC</p></div>
-                                                                                                                                       <div id="cong" class="BordC" >
-                                                                                                                                           <p id="TConf"  class="CLeter">SOCIAL</p><img id="ConIm" src="https://i.postimg.cc/g0ZR3bSR/1.png" /><img id="ConIm" src="https://i.postimg.cc/g0ZR3bSR/1.png" />
-
-                                                                                                                                           <div id="ConfClrs" class="BordC">
-                                                                                                                                               <div id="Sl">
-                                                                                                                                                   <div id="Fr" class="BordC">
-                                                                                                                                                       <img class="BordC" src="https://i.postimg.cc/PxjWW7cz/0b4c5b621e4c4758023a28616eeef294.jpg" /> 
-                                                                                                                                                   </div>
-                                                                                                                                                   <div id="Fr" class="BordC">
-                                                                                                                                                       <img class="BordC" src="https://i.postimg.cc/PxjWW7cz/0b4c5b621e4c4758023a28616eeef294.jpg" /> 
-                                                                                                                                                   </div>
-                                                                                                                                               </div>
-                                                                                                                                           </div>
-                                                                                                                                       </div>
-                                                                                                                                       <div class="Mnux" id="BordC"> <img id="ConIm2" src="https://i.postimg.cc/g0ZR3bSR/1.png" /><img id="ConIm2" src="https://i.postimg.cc/g0ZR3bSR/1.png" /> <p  class="CLeter" id="TConf2">ABOUT THIS</p></div>
+        <div id="ocult"></div>
+        <div id="ocult2"></div>
+        <div id="sM">
+            <img id="Nme" src="https://i.postimg.cc/L8WqMTbQ/acaf3bd7ac4d6177916d367cdcf2b216.png" />
+            <p id="conT"></p>
+            <img id="imj" src="https://i.postimg.cc/7ZwDcT9G/146.gif" />
+        </div>
+        <div id="M">
 
 
 
-                                                                                                                                   </div>
-                                
-                                </div>
 
-                                <div id="apost">
-                                    <div id="posts">
-                                        <div id="post" class="BordC">
-                                            <img id="Postimg" src="https://i.postimg.cc/tTp9mnwr/Screenshot-1.png" class="BordC" />
-                                            <p id="Ded">Eres una gran amiga, una de las mejores en realidad, a pesar de que hay ciertas cosas que no estoy de acuerdo contigo, pero sabes que cada paso o acción que tomes siempre te apoyaré y lo sabes. Te quiero mucho bb, sigue mirando adelante y no dejes que nada te desanime ❤</p>
-                                            <p id="Dtit" class="CLeter">title</p>
-                                        </div>
-                                        <div id="post" class="BordC">
-                                            <img id="Postimg" src="https://i.postimg.cc/tTp9mnwr/Screenshot-1.png" class="BordC" />
-                                            <p id="Ded">Eres una gran amiga, una de las mejores en realidad, a pesar de que hay ciertas cosas que no estoy de acuerdo contigo, pero sabes que cada paso o acción que tomes siempre te apoyaré y lo sabes. Te quiero mucho bb, sigue mirando adelante y no dejes que nada te desanime ❤</p>
-                                            <p id="Dtit" class="CLeter">title</p>
-                                        </div>
-                                        <div id="post" class="BordC">
-                                            <img id="Postimg" src="https://i.postimg.cc/tTp9mnwr/Screenshot-1.png" class="BordC" />
-                                            <p id="Ded">Eres una gran amiga, una de las mejores en realidad, a pesar de que hay ciertas cosas que no estoy de acuerdo contigo, pero sabes que cada paso o acción que tomes siempre te apoyaré y lo sabes. Te quiero mucho bb, sigue mirando adelante y no dejes que nada te desanime ❤</p>
-                                            <p id="Dtit" class="CLeter">title</p>
-                                        </div>
-                                    </div>
-                                </div>
+            <div id="Tnme"><div id="kg">Kagura</div><p id="sn">SINNER</p></div>
+            <div id="MainImg"> <img src="https://i.postimg.cc/L6wdg0wk/fg.jpg" /></div>
+            <div id="Eq">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+                <div class="bar" id="bar4"></div>
+                <div class="bar" id="bar5"></div>
+                <div class="bar" id="bar3"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar11"></div>
+            </div>
+            <div id="Abtme">
+                <div class="Abt"><span>SINNER</span></div>
+                <div class="Abt"><span>RX-T67</span></div>
+                <div class="Abt"><span>XX</span></div>
+                <div class="Abt"><span>PARADOX</span></div>
+            </div>
 
-                                <div id="Aforum" class="BordC">
-                                    <div id="Lpost"><img id="imgL" src="https://i.postimg.cc/bwjdSddF/Screenshot-6.png" class="BordC" /> <div id="TextAr">
-                                        <p id="Ptit">MechanizeDoll</p>
-                                        <p id="Pte">Give me a reason 'Cause i got nothing to <br /> gain... So what am i doing now?.</p>
-                                             <span id="tim">09:46pm<span id="lik">. Like .</span></span>  <img id="imgLik" src="https://i.postimg.cc/rs1c74k6/me-gusta.png" /><span id="numlik">24</span>
-                                             </div></div>
-                                    <div id="Upost">
-                                        <img id="imgL" src="https://i.postimg.cc/Gmj88rWd/a07cb1d352c0c0ed97f89c4bd3b7f9c5.jpg" class="BordC" /> <div id="TextAr">
-                                            <p id="Ptit">xEvangelist</p>
-                                            <p id="Pte">This is so ridiculous...</p>
-                                            <span id="tim">09:46pm<span id="lik">. Like .</span></span>  <img id="imgLik" src="https://i.postimg.cc/rs1c74k6/me-gusta.png" /><span id="numlik">666</span>
-                                        </div>
-                                    </div>
-                                   
-                                </div>
-
-                                <div id="Amusic" >
-                                   
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
+            <div id="imgs">
+                <div id="Aimgs">
+                    <img />
 
                 </div>
 
             </div>
+            <div id="Dfrd">
+                <div id="Fl"><p>Social</p></div>
+                <div id="Over"> <div id="pVr"> <p>Keep your cursor here</p></div></div>
+                <div id="LFrds">
+                    <div id="Slid">
+                        <div class="Friend">
+                            <div class="Bf1">
+                                <img src="https://i.postimg.cc/1tKDxw04/tumblr-23bb1a542e8933c8575162c46d3b7a9f-5dcd0067-2048.jpg" id="imgBkF" />
+                                <div id="filter"></div>
+                                <div id="Atex">
+                                    <div class="wid" id="Pnum">.01</div>
+                                    <div class="wid" id="Pnme">Nihil</div>
+                                    <div class="wid" id="pdte">xEvangelist/00000000</div>
+                                </div>
 
+                            </div>
+                        </div>  <div class="Friend">
+                            <div class="Bf1">
+                                <img src="https://u.cubeupload.com/Azhriell/tumblr544587904.png" id="imgBkF" />
+                                <div id="filter"></div>
+                                <div id="Atex">
+                                    <div class="wid" id="Pnum">.01</div>
+                                    <div class="wid" id="Pnme">Nihil</div>
+                                    <div class="wid" id="pdte">xEvangelist/00000000</div>
+                                </div>
 
+                            </div>
+                        </div>  <div class="Friend">
+                            <div class="Bf1">
+                                <img src="https://u.cubeupload.com/Azhriell/bb511074967315355037532.jpg" id="imgBkF" />
+                                <div id="filter"></div>
+                                <div id="Atex">
+                                    <div class="wid" id="Pnum">.01</div>
+                                    <div class="wid" id="Pnme">Nihil</div>
+                                    <div class="wid" id="pdte">xEvangelist/00000000</div>
+                                </div>
 
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </body>
