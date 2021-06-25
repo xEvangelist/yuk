@@ -10,566 +10,915 @@
             height: 100%;
             position: fixed;
             margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
         a {
+            color: white;
             text-decoration: none;
         }
 
-
-
-        #main, #T1 {
-            font-family: Bahnschrift;
-            cursor: url(https://i.postimg.cc/Rh2ft0Hf/tumblr-inline-nrkb03fxct1ry72eo-75sq.png),auto;
+        #main {
             z-index: 99;
             width: 100%;
             height: 100%;
             position: fixed;
-            background: black;
+            background:gray;
+            
             margin: 0;
             top: 0;
             overflow: hidden;
             text-align: center;
             transition: all 1s ease;
+            /*filter: invert(100%);*/
         }
 
-        #Err {
+
+        #menu {
             position: absolute;
-            width: 55%;
-            height: 10%;
-            top: 35%;
-            left: 5%;
-            text-align: left;
-            overflow: hidden;
+            width: 100%;
+            background:#262626;
+            height: 12%;
+            z-index: 10;
+        }
+        #selectr {
+            width: 6vw;
+            height: 150%;
+            position: absolute;
+            background: #d03838;
+            left: 4%; transition:.5s all ease;
+        }
+        #m4:target #Maintrgt{ height:100%; 
+        }
+        #m4:target #selectr {
+            left:14.7%; height:110%; 
+        }
+        #m4:target #triangle {
+            opacity: 1;
+        }
+        #m4:target #img1{
+            filter: invert(0%);
+        }
+        #m4:target #sp1 { letter-spacing:.3vw;
+            filter: invert(100%);
+        }
+        #m4:target #mign { width:4vw; left:1vw;
+        }
+        #m4:target #Mainnick { font-size:1vw; letter-spacing:1vw; margin-top:4.8vw;
         }
 
-        #Serr {
-            font-size: 5vw;
-            letter-spacing: 2.5vw;
-            position: absolute;
-            top: -100%;
+
+        #m3:target #Maintrgt {
+            height: 100%;
+        }
+        #m3:target #selectr {
+            left: 23.5%;
+            height: 110%;
+        }
+
+        #m3:target #triangle {
+            opacity: 1;
+        }
+
+        #m3:target #img2 {
+            filter: invert(0%);
+        }
+
+        #m3:target #sp2 {
+            letter-spacing: .3vw;
+            filter: invert(100%);
+        }
+
+        #m3:target #mign {
+            width: 4vw;
+            left: 1vw;
+        }
+
+        #m3:target #Mainnick {
+            font-size: 1vw;
+            letter-spacing: 1vw;
+            margin-top: 4.8vw;
+        }
+
+
+        #m2:target #Maintrgt {
+            height: 100%;
+        }
+
+        #m2:target #selectr {
+            left: 32.7%;
+            height: 110%;
+        }
+
+        #m2:target #triangle {
+            opacity: 1;
+        }
+
+        #m2:target #img3 {
+            filter: invert(0%);
+        }
+
+        #m2:target #sp3 {
+            letter-spacing: .3vw;
+            filter: invert(100%);
+        }
+
+        #m2:target #mign {
+            width: 4vw;
+            left: 1vw;
+        }
+
+        #m2:target #Mainnick {
+            font-size: 1vw;
+            letter-spacing: 1vw;
+            margin-top: 4.8vw;
+        }
+
+
+
+        #Mainnick {
+            transition: .5s all ease;
             color: white;
+            font-size: 1.5vw;
+            letter-spacing: .15vw;
+            font-family: 'Agency FB';
+            margin-top: 7.2vw;
+            font-weight: bolder;
         }
-            #Serr:before {
-                content: 'LOADING ';
-                animation: entrance2 .1s 1;
-                animation-delay: 10s;
-                animation-fill-mode: forwards;
+
+        #submenu {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 11;
+        }
+        #Maintrgt { width:6vw; height:150%; position:absolute; left:4%;
+        }
+            #Maintrgt img { filter:invert(100%); width:6vw; top:.5vw; position:absolute; left:0;  transition: .5s all ease;
+            }
+        #img1, #sp1, #mign, #img2, #sp2, #img3, #sp3 {
+            transition: .5s all ease;
+        }
+
+       
+        .menus { width:5vw; height:2vw;  left:15%; position:absolute; top:50%;
+        }
+            .menus img { position:absolute; right:0; bottom:.2vw; width:.5vw; filter:invert(100);
+            }
+            .menus span { color:white; font-size:1vw; letter-spacing:.2vw; font-family:'Agency FB';  
+            }
+        #menu2 { left:24%;
+        }
+        #menu3 { left:33%;
+        }
+
+        #triangle {
+            width: 0;
+            height: 0;
+            top: 100%;
+            position: absolute; opacity:0;
+            border-right: 3vw solid transparent;
+            border-bottom: 3vw solid transparent;
+            border-left: 3vw solid transparent;
+            border-top: 1.5vw solid #f62e2e;
+        }
+        #cont {
+            position: absolute;
+            width: 100%;
+            background: #d03838;
+            height: 64.5%;
+            top: 12%;
+            border-bottom:.5vw solid #262626;
+        }
+        #m4:target #Rot { left:-100%;
+        }
+        #m3:target #Rot {
+            left: -200%;
+        }
+        #m2:target #Rot {
+            left: -300%;
+        }
+        
+        #Rot {
+            position: absolute;
+            width: 400%;
+            height: 100%; left:0;
+            transition: .5s all ease;
+        }
+        #mainIm { position:absolute; width:60%; height:100%; background:#171717; overflow:hidden;
+        }
+        .imgMain { width:25%; height:100%; position:absolute; 
+        }
+        #Mimg1 {
+            left: 0;
+           
+        }
+        #m1:target #Mimg1 {
+            animation: blurx 3s 1;
+        }
+        #Mimg2 { left:25%;
+        }
+        #m4:target #Mimg2 {
+            animation: blurx 3s 1;
+        }
+        #Mimg3 {
+            left: 50%;
+        }
+        #m3:target #Mimg3 {
+            animation: blurx 3s 1;
+        }
+        #Mimg4 {
+            left: 75%;
+        }
+        #m2:target #Mimg4 {
+            animation: blurx 3s 1;
+        }
+        .menus span:hover { color:#f62e2e;
+        }
+        @keyframes blurx {
+            0% {
+                filter: blur(3px);
             }
 
-        @-webkit-keyframes entrance2 {
-            0% {
-                content: 'ERROR ';
-                color: #7d1717;
-            }
+
 
             100% {
-                content: 'ERROR ';
-                color: #7d1717;
+                filter: blur(0px);
             }
         }
-
-
-
-        #Se2 {
-            font-size: 5vw;
-            letter-spacing: 2vw;
-            font-family: Arial;
-            animation: entrance2 .1s 1;
-            animation-delay: 10s;
+        #posts, #Friends, #music {
+            position: absolute; z-index:-1;
+            width: 40%; right:0; opacity:0;
+            height: 100%; overflow:hidden;
+        
+        }
+        #About {
+            position: absolute; 
+            width: 40%;
+            right: 0;
+            opacity: 1;
+            height: 100%;
+            overflow: hidden;
+        }
+        #m4:target #posts { opacity:1; z-index:5;
+        }
+        #m3:target #Friends {
+            opacity: 1;
+            z-index: 5;
+        }
+        #m4:target #About, #m3:target #About, #m2:target #About {
+            opacity: 0;
+        }
+        #postCont {
+            position: absolute;
+            width: 100%;
+            height: 200%;
+        }
+        #postIntro p, #FriendIntro p, #aboutIntro p{ color:white; font-family:'Agency FB'; position:absolute; font-weight:bold; filter:blur(.5px); opacity:0;
+        }
+       
+        
+        #postIntro { z-index:10; background:#f62e2e;
+            position: absolute; 
+            width: 100%;
+            height: 50%;
+        }
+       
+        #PPost1 { transform:rotate(270deg); font-size:2.2vw; letter-spacing:.4vw; bottom:5%; position:absolute; 
+        }
+        #m4:target #PPost1 { animation:entrance .5s 1; animation-fill-mode:forwards;
+        }
+       
+        #PPost3 {
+            position: absolute;
+            transform: rotate(270deg);
+            font-size: 6.2vw;
+            letter-spacing: 1.2vw;
+            left: -9%;
+           bottom:2%;
+        }
+        #m4:target #PPost3 {
+            animation: entrance .5s 1;
+            animation-delay: .5s;
             animation-fill-mode: forwards;
         }
 
-
-        #blink {
-            color: white;
-            animation: blink 1s infinite;
+        #PPost2 {
+            
+            font-size: 2.2vw;
+            letter-spacing: 1.2vw;
+            top: -3%; right:2%;
+            position: absolute;
+        }
+        #m3:target #PPost2 {
+            animation: entrance .5s 1;
+            animation-fill-mode: forwards;
+        }
+        #PPost4 {
+            position: absolute;
+            transform: rotate(90deg);
+            font-size: 6.2vw;
+            letter-spacing: 1.4vw;
+            right:-22%;
+            top:25%;
         }
 
-        @keyframes blink {
+        #m3:target #PPost4 {
+            animation: entrance .5s 1;
+            animation-delay: .5s;
+            animation-fill-mode: forwards;
+        }
+
+        #PPost5 {
+          
+            font-size: 6.2vw;
+            letter-spacing: 1.2vw;
+            top: -20%;
+            left: 2%;
+            position: absolute;
+        }
+        #m1:target #PPost5 {
+            animation: entrance .5s 1;
+            animation-delay: .2s;
+            animation-fill-mode: forwards;
+        }
+        #PPost6 {
+            font-size: 3.2vw;
+            transform: rotate(90deg);
+            letter-spacing: .8vw;
+            top: -4%;
+            left: 50%;
+            position: absolute;
+        }
+        #m1:target #PPost6 {
+            animation: entrance .5s 1;
+            animation-delay: .7s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes entrance {
             0% {
-                opacity: 0;
+               opacity:0;
             }
-
-            50% {
-                opacity: 0;
-            }
-
-            50.1% {
-                opacity: 1;
-            }
-
             100% {
                 opacity: 1;
             }
         }
-
-        #Stat {
-            position: absolute;
-            width: 25%;
-            height: 5%;
-            left: 5.5%;
-            top: 24%;
-            text-align: left;
-            font-size: 1.3vw;
-            letter-spacing: .6vw;
-            color: white;
-            opacity: .8;
+        #Apost { width:70%; height:90%;  position:absolute; top:7.5%; left:25%; overflow:auto; opacity:0;
+        }
+        #m4:target #Apost {
+            animation: entrance .5s 1;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        #Apost::-webkit-scrollbar, #aFri::-webkit-scrollbar {
+            width: .3vw;
+            background-color: transparent;
         }
 
-        #Txst {
-            margin-right: 7%;
+
+        #Apost::-webkit-scrollbar-thumb, #aFri::-webkit-scrollbar-thumb {
+            background-color: white;
+        } 
+        #pub { margin-bottom:2vw;
+            width: 95%;
+            height: auto;
+            background: #f35656;
+            box-shadow: .2vw .2vw .5vw #262626;
+            border-radius: .4vw;
+        }
+       
+        #pub img
+        {
+            width:90%;  margin-top:.5vw; box-shadow:.2vw .2vw .5vw #262626;
+        }
+        .ppost { color:white; font-family:'Agency FB'; 
+        }
+        #tit { font-size:1vw;  letter-spacing:.3vw;
+        }
+        #Subt { font-size:.7vw; letter-spacing:.1vw; font-family:Arial;
+        }
+        #bar {
+            letter-spacing: .2vw;
+            font-size: 1.5vw;
             font-weight: bold;
+            -webkit-text-stroke:  .05vw #262626; filter:blur(1px);
+        }
+        #credit { font-size:.7vw; letter-spacing:.2vw; margin-bottom:1vw;
+        }
+        #aboutIntro p {
+            opacity:1; z-index:2;
+        }
+        #m1:target #aboutIntro p { opacity:0;
         }
 
-        #bro {
-            color: dimgray;
-            opacity: 0;
-            animation: blink 1s infinite;
-            animation-delay: 9.3s;
-        }
 
-        #t, #t2, #t3 {
-            text-align: left;
-            left: 5%;
-            width: 36%;
-            height: 5%;
-            background-color: black;
-            color: #fff;
-            outline: 0;
-            line-height: 1vw;
-            font-size: .7vw;
-            font-family: Consolas,Consolas;
-            overflow: hidden;
-            transition: all 0.3s;
-            cursor: text;
+
+        #aFri {
+            width: 74%;
+            height: 88%;
             position: absolute;
-            top: 10%;
+            top: 4%;
+            left: 3%;
+            overflow: auto;
+            direction: rtl;
+        }
+        #foot { width:100%; background:#262626; bottom:0; position:absolute; height:2vw;
+        }
+        #xatlog { height:4vw; width:4vw; position:absolute; background:#262626; bottom:0; 
+        }
+            #xatlog img { width:3.4vw; position:absolute; left:.3vw; top:1vw; filter:invert(100%);
+            }
+        #crdy p {
+            animation: flicker5 1.5s infinite alternate;
+            color: rgba(66, 66, 66, 0.5);
+            font-size: .8vw;
+            letter-spacing: .2vw;
+            margin-left: .5vw;
+            animation-delay: .3s;
+        }
+        @keyframes flicker5 {
+
+            20%, 24%, 55%, 100% {
+                color: #FFF;
+                text-shadow: 0 0 .2vw #fff, 0 0 .8vw #fff, 0 0 1.3vw #FF0000, 0 0 2.9vw #FF0000, 0 0 5.8vw #FF0000, 0 0 6.5vw #FF0000, 0 0 7.3vw #FF0000, 0 0 11vw #FF0000;
+            }
+
+            0%, 18%, 22% {
+                color: rgba(66, 66, 66, 0.5);
+                text-shadow: none;
+            }
+        }
+        #m2:target #music {
+            animation: entrance .5s 1; animation-delay:.5s;
+            z-index: 5;
+            animation-fill-mode: forwards;
+        }
+        #aFri { opacity:0;
+        }
+        #m3:target #aFri {
+            animation: entrance .5s 1;
+            animation-delay: 1s;
+            z-index: 5;
+            animation-fill-mode: forwards;
+        }
+        #album { position:absolute; width:90%; height:65%; top:7%; left:5%;  overflow:hidden;
+                 
+        }
+        #imgback1 { width:100%; position:absolute; height:100%; transform:scale(1.3); filter:blur(1.5px); left:0;
+        }
+        #imgfont { width:21.5vw; height:21.5vw; position:absolute; left:22%;
+        }
+        #backf { width:96%; height:94%; position:absolute; left:2%; top:3%; background:#262626;
+        }
+        #Repr { 
+            filter: invert(100%);
+            position: absolute;
+            width: 90%;
+            height: 18%;
+            top: 77%;
+            left: 5%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
-        #t2 {
+        #ines {
+            position: absolute;
+            width: 100%;
+            height: 20%;
             top: 60%;
         }
 
-        #t3 {
-            top: 70%;
-            left: 20%;
-            height: 27%;
-            width: 50%;
-            animation: t3type 41s 1, t3none .1s 1;
-            animation-delay: 0s,41s;
-            animation-fill-mode: none,forwards;
-        }
-
-        @-webkit-keyframes t3type {
-            0% {
-                -webkit-user-modify: read-write;
-            }
-
-            100% {
-                -webkit-user-modify: read-write;
-            }
-        }
-
-        @-webkit-keyframes t3none {
-            0% {
-                -webkit-user-modify: read-only;
-            }
-
-            100% {
-                -webkit-user-modify: read-only;
-            }
-        }
-
-        #spin {
-            color: white;
-            margin-left: 1vw;
-            font-size: .6vw;
-            animation: spin1 .25s infinite;
+        #LinBk {
             position: absolute;
-        }
-
-        #p, #p1, #p2 {
-            margin-left: .3vw;
+            width: 100%;
+            height: .2vw;
+            background: black;
+            top: 40%;
+            border-radius: 20%;
             overflow: hidden;
-            position: relative;
-            white-space: nowrap;
-            text-decoration: none;
-            font-size: .9vw;
-            border-right: 0;
         }
 
-            #p:nth-child(1) {
-                animation: type1 4s steps(55,end), border 1s infinite, borderOff 1s infinite;
-                animation-delay: 0s,0s,4s;
-            }
-
-            #p:nth-child(2) {
-                opacity: 0;
-                animation: type1 4s steps(55,end), border 1s infinite, borderOff 1s infinite, entrance .1s 1;
-                animation-delay: 4s,4s,8s,4s;
-                animation-fill-mode: none,none,none,forwards;
-            }
-
-        #p1 {
-            opacity: 0;
-            animation: type1 4s steps(55,end), border 1s infinite, borderOff 1s infinite, entrance .1s 1;
-            animation-delay: 10s,10s,14s,10s;
-            animation-fill-mode: none,none,none,forwards;
+        #LinIn {
+            position: absolute;
+            width: 100%;
+            height: 100%; filter:invert(100%);
+            background: linear-gradient(#f62e2e 50%, dimgray 100% );
+            animation: letin 500s 1;
         }
 
-        @-webkit-keyframes entrance {
+        @keyframes letin {
             0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @-webkit-keyframes border {
-            0% {
-                border-right: .15vw solid white;
-            }
-
-            50% {
-                border-right: .15vw solid white;
-            }
-
-            50.1% {
-                border-right: 0;
-            }
-
-            100% {
-                border-right: 0;
-            }
-        }
-
-        @-webkit-keyframes borderOff {
-            0% {
-                border-right: 0;
-            }
-
-            100% {
-                border-right: 0;
-            }
-        }
-
-        @-webkit-keyframes type1 {
-            from {
                 width: 0;
             }
 
-            to {
-                width: 95%;
-            }
-        }
-
-        @-webkit-keyframes spin1 {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            25% {
-                transform: rotate(90deg);
-            }
-
-            50% {
-                transform: rotate(180deg);
-            }
-
-            75% {
-                transform: rotate(270deg);
-            }
-
             100% {
-                transform: rotate(360deg);
+                width: 100%;
             }
         }
 
-        #mnsj {
-            color: dimgray;
-            position: absolute;
-            font-size: .65vw;
-            letter-spacing: .3vw;
-            top: 19%;
-            left: 5.5%;
-        }
-
-            #mnsj span {
-                color: white;
-            }
-
-        #void {
-            position: absolute;
-            height: 3%;
-            width: 17%;
-            top: 50%;
-            left: 2%;
-        }
-
-        #gi, #go {
-            color: #20761c;
-            position: absolute;
-            animation: entrance3 .1s 1;
-            animation-delay: 10s;
-            animation-fill-mode: forwards;
-        }
-        @-webkit-keyframes entrance3 {
-            0% {
-                color: #7d1717;
-            }
-
-            100% {
-                color: #7d1717;
-            }
-        }
-
-        #gi {
-            left: 0;
+        #T0, #Tf, #band, #Mtt {
             font-size: .7vw;
-            top: .35vw;
-            filter: blur(1px);
+            letter-spacing: .1vw;
+            position: absolute;
+            top: 65%;
         }
 
-        #go {
+        #Tf {
             right: 0;
-            top: .05vw;
-            font-size: 1.2vw;
-            filter: blur(1px);
-            animation: blink 1s infinite,entrance3 .1s 1;
-            animation-delay: .5s, 10s;
-            animation-fill-mode: none,forwards;
         }
 
-        #cont {
-            position: absolute;
-            width: 74%;
-            background: gray;
-            height: 100%;
-            left: 20%;
-            font-size: 1.1vw;
-            letter-spacing: .4vw;
-            font-family: Consolas;
+        #band {
+            width: 100%;
+            top: 7%;
+        }
+
+        #Mtt {
             font-weight: bold;
+            width:100%;  top:-10%;
         }
 
-        #opt {
+        .bt1 {
             position: absolute;
-            top: 63%;
-            left: 5%;
-            height: 1.5vw;
-            font-size: 1.5vw;
-            letter-spacing: .5vw;
+            width: 1vw;
+            top: 35%;
         }
 
-        #op {
+        #retr {
+            left: 40%;
+        }
+
+        #adv {
+            right: 40%;
+        }
+
+        #play {
+            position: absolute;
+            width: 2vw;
+            top: 25%;
+            left: 47%;
+        }
+
+        .bt2 {
+            position: absolute;
+            top: 80%;
+        }
+
+        #ag {
+            left: 43%;
+            top: 77%;
+            width: 1.5vw;
+        }
+
+        #com {
+            width: 1vw;
+            left: 53%;
+        }
+
+        #control {
+            width: 2vw;
+            height: 2vw;
             opacity: 0;
-            white-space: nowrap;
+            position: absolute;
+            z-index: 999;
+            left: 45%;
+            top: 26%;
+        }
+        #aboutinf { width:80%; height:80%; position:absolute;  top:2%; left:15%;
+        }
+        #imgfon { position:absolute; border-radius:0 0 0 60vw; width:40vw; height:40vw; background:red; top:-20%; left:30%; overflow:hidden; border:.6vw solid white; filter:blur(1px);
+        }
+        #imgpst {position:absolute; width:40vw; height:40vw; left:0;
+        }
+        #Ared { width:80%; height:10%;  position:absolute; left:2%; bottom:2%;
+        }
+        #nmereg { color:darkgray; position:absolute; left:2%; font-size:1.1vw; letter-spacing:.1vw; top:25%;
+        }
+        #nmenum {
+            color: darkgray;
+            position: absolute;
+            left: 2%;
+            font-size: .8vw;
+            letter-spacing: .25vw;
+            top: 30%;
+        }
+        .red { width:2vw; height:2vw; position:absolute; filter:invert(100%); top:1vw;
+        }
+        .red:nth-child(1) { left:0;
+        }
+            .red:nth-child(2) { left:30%;
+            }
+            .red:nth-child(3) {left:60%;
+            }
+        #fri {
+            position: relative;
             overflow: hidden;
-            color: white;
-            animation: type1 2s steps(10,end), border 1s infinite, borderOff 1s infinite, entrance .1s 1;
-            animation-delay: 14s,14s,18s,14s;
-            animation-fill-mode: none,none,none,forwards;
+            width: 70%;
+            height: 5vw;
+            background: #f35656;
+            margin-bottom: 2.5vw;
+            margin-right: 5%;
+            border-radius: .5vw;
+            box-shadow: .2vw .2vw .5vw #262626;
         }
-
-            #op span {
-                color: dimgray;
-            }
-
-        #p2:before {
-            content: 'xat.me@xEvangelist://> INVALID COMMAND :';
-            animation: error 4s steps(50,end);
-            animation-delay: 41s;
+        #fimg1 { overflow:hidden;
+            width: 6vw; border:.2vw solid white; filter:blur(1px);
+            height: 6vw;
+            position: absolute;
+            background: red;
+            border-radius: 0 0 10vw 0;
+            top: -.5vw;
+            left: -1%;
+        }
+        #fimg1 img { width:100%; height:100%;
+        }
+        #fname { color:white; font-size:.6vw; letter-spacing:.2vw; position:absolute; left:35%; top:7%;
+        }
+        #fdesc {
+            color: darkgray;
+            font-size: .6vw;
+            letter-spacing: .1vw;
+            position: absolute;
+            left: 30%; width:65%;
+            top: 22%;
+        }
+        #bar2 {
+            letter-spacing: .2vw;
+            font-size: 1.5vw;
+            font-weight: bold; position:absolute; bottom:-5%;
+            -webkit-text-stroke: .05vw #262626; width:80%; left:20%;
+            filter: blur(1px);
+        }
+        #cirl { position:absolute; left:2%; width:15%; height:5%;  top:35%;
+        }
+        .c1 { width:.8vw; height:.8vw; background:gray; float:left; margin-right:1vw; border-radius:50%; filter:blur(1px); opacity:.7;
+        }
+        #Ared span { color:white; position:absolute; letter-spacing:.2vw; font-size:.7vw; bottom:10%;
+        }
+        #sp11 { left:8%;
+        }
+        #sp22 { left:38%;
+        }
+        #sp33 {left:68%;
+        }
+        #aboutinf, #aboutIntro span, #Ared, #cirl {
+            opacity: 0;
+        }
+        #m1:target #aboutinf, #m1:target #aboutIntro span, #m1:target #Ared, #m1:target#cirl{
+            animation: entrance .5s 1;
+            animation-delay: 1s;
             animation-fill-mode: forwards;
-        }
-
-        #p2:last-child {
-            animation: type1 4s steps(101,end);
-        }
-
-            /*#p2:last-child:before {
-                animation: error 4s steps(50,end);
-                animation-delay: 41s;
-                animation-fill-mode: forwards;
-            }*/
-
-     
-        @-webkit-keyframes error {
-            0% {
-                color: #fe3636;
-                content: 'TIMED OUT://>Shutdown to reboot '; 
-            }
-
-            100% {
-                color: #fe3636;
-                content: 'TIMED OUT://>Shutdown to reboot ';
-            }
-        }
-       
-
-        #p2:nth-child(1):before, #p2:nth-child(2):before, #p2:nth-child(3):before, #p2:nth-child(4):before {
-            content: ''
-        }
-
-        #p2:nth-child(1) {
-            opacity: 0;
-            animation: type1 4s steps(55,end), entrance .1s 1;
-            animation-delay: 16s,16s;
-            animation-fill-mode: none,forwards;
-        }
-
-        #p2:nth-child(3) {
-            opacity: 0;
-            animation: type1 4s steps(55,end), entrance .1s 1;
-            animation-delay: 18s, 18s;
-            animation-fill-mode: none, forwards;
-        }
-
-        #p2:nth-child(4) {
-            opacity: 0;
-            animation: type1 4s steps(55,end), entrance .1s 1;
-            animation-delay: 19s, 19s;
-            animation-fill-mode: none, forwards;
-        }
-
-
-        #Count:before {
-            content: '20';
-            animation: timer 20s 1, tored 1s 1;
-            animation-delay: 21s, 41s;
-            animation-fill-mode: forwards,forwards;
-        }
-
-        @-webkit-keyframes tored {
-            0% {
-                content: 'TIMED OUT';
-                color: #fe3636;
-            }
-
-            100% {
-                content: 'TIMED OUT';
-                color: #fe3636;
-            }
-        }
-
-        @keyframes timer {
-            1% {
-                content: '20';
-            }
-
-            5% {
-                content: '19';
-            }
-
-            10% {
-                content: '18';
-            }
-
-            15% {
-                content: '17';
-            }
-
-            20% {
-                content: '16';
-            }
-
-            25% {
-                content: '15';
-            }
-
-            30% {
-                content: '14';
-            }
-
-            35% {
-                content: '13';
-            }
-
-            40% {
-                content: '12';
-            }
-
-            45% {
-                content: '11';
-            }
-
-            50% {
-                content: '10';
-            }
-
-            55% {
-                content: '09';
-            }
-
-            60% {
-                content: '08';
-            }
-
-            65% {
-                content: '07';
-            }
-
-            70% {
-                content: '06';
-            }
-
-            75% {
-                content: '05';
-            }
-
-            80% {
-                content: '04';
-            }
-
-            85% {
-                content: '03';
-            }
-
-            90% {
-                content: '02';
-            }
-
-            95% {
-                content: '01';
-            }
-
-            100% {
-                content: '00';
-            }
         }
     </style>
 </head>
-
-
 <body>
     <div id="main">
-        <div id="T1">
-            <div id="t">
+        <div id="m1">
+            <div id="m2">
+                <div id="m3">
+                    <div id="m4">
 
-                <div id="p" name="p">Xat.me xEvangelist DEVConsole [Version 17.8.00001]    (C)2021 Xat.com </div>
-                <div id="p" name="p">Injecting Exploit_xD@T4.DAT:   to: 104.25.78.3  From:192.168.0.100<span id="spin">|</span></div>
+                       <div id="menu">
+                          
+                           <div id="selectr">
+                               <div id="triangle"></div>
+                           </div>
+                           <div id="submenu">
+                               <a href="#m1">
+                                   <div id="Maintrgt">
+                                       <img id="mign" src="https://i.postimg.cc/2ySsmPkG/abstracto.png" />
+                                       <p id="Mainnick">NISHI</p>
+                                   </div>
+                               </a>
 
-            </div>
-            <p id="mnsj">|| <span>CHKDSK.</span>SYSTEMINFO ||</p>
-            <div id="Stat"><span id="Txst">STATUS</span><span id="bro">TIMED OUT</span></div>
-            <div id="Err"><p id="Serr"><span id="Se2"> •</span><span id="blink">|</span></p></div>
-            <div id="void"><span id="gi">▍</span><div id="cont">VOID $tmp_s</div><span id="go">█</span></div>
-            <div id="t2">
+                               <a href="#m4">
+                                   <div id="menu1" class="menus">
+                                       <span id="sp1">POSTS</span>
+                                       <img id="img1" src="https://i.postimg.cc/2SxvPJt3/niveles.png" />
+                                   </div>
 
-                <div id="p1" class="p3">C:/Userunknow/AppData/Roaming/xD@T4.DAT   <span style="color:#fe3636;">FILESYSTEM/ERROR</span></div>
+                               </a>
+                               <a href="#m3">
+                                   <div id="menu2" class="menus">
+                                       <span id="sp2">FRIENDs</span>
+                                       <img id="img2" src="https://i.postimg.cc/2SxvPJt3/niveles.png" />
+                                   </div>
 
-            </div>
-            <div id="opt"><div id="op">OPT <span> REBOOT?</span></div></div>
-            <div id="t3">
+                               </a> <a href="#m2">
+                                   <div id="menu3" class="menus">
+                                       <span id="sp3">MUSIC</span>
+                                       <img id="img3" src="https://i.postimg.cc/2SxvPJt3/niveles.png" />
+                                   </div>
 
-                <div id="p2" class="p3">•</div>
-                <div id="p2" class="p3"> </div>
-                <div id="p2" class="p3">• Click down to type your command      Expired in <span id="Count"></span> </div>
-                <div id="p2" class="p3"><span id="blink">█</span> </div>
+                               </a>
+                           
+                           </div>
+
+                       </div>
+
+                       <div id="cont">
+                           <div id="mainIm">
+                               <div id="Rot">
+                                   <img id="Mimg1" class="imgMain" src="https://i.postimg.cc/N0x1h0d3/wp2762997.jpg" />
+                                   <img id="Mimg2" class="imgMain" src="https://i.postimg.cc/DfC3vdWZ/tumblr-nmb9mxf8v-T1u1mutio1-1280.png" />
+                                   <img id="Mimg3" class="imgMain" src="https://i.postimg.cc/4y2DWsCt/tumblr-507f60556e7b58ab8b6df3826f9630f1-77bac32e-2048.jpg" />
+
+                                   <img id="Mimg4" class="imgMain" src="https://i.postimg.cc/HnLG0jNd/687474703a2f2f73342e666176696d2e636f6d2f6f7269672f3135303232372f626c61636b2d616e642d77686974652d6772.jpg" />
+                               </div>
+
+
+                           </div>
+                           <div id="About">
+                              
+                               <div id="aboutIntro">
+
+                                   <p id="PPost5">ABOUT</p>
+                                   <p id="PPost6">ME:</p>
+
+                                   <div id="aboutinf">
+                                       <div id="imgfon">
+                                           <img src="https://u.cubeupload.com/Azhriell/yj.jpg" id="imgpst" />
+                                       </div>
+
+                                   </div>
+                                   <span id="nmereg">NAYELYS / NAYI</span>
+                                   <span id="nmenum">1522135253</span>
+                                   <div id="Ared">
+                                       <img class="red" src="https://i.postimg.cc/wj2wFsvn/facebook-1.png" /> 
+                                       <img class="red" src="https://i.postimg.cc/g2mMvKYv/logotipo-de-twitter-sobre-fondo-negro.png" /> 
+                                       <img class="red" src="https://i.postimg.cc/rppQHFRs/tumblr-1.png" /> <span id="sp11">/NAYELIS</span><span id="sp22">/NAYELIS</span><span id="sp33">/NAYELIS</span>
+                                   </div>
+                                   <div id="cirl">
+                                       <div class="c1"></div>
+                                       <div class="c1"></div>
+                                       <div class="c1"></div>
+                                   </div>
+
+                               </div>
+
+                              
+                           </div>
+                           <div id="posts">
+                               <div id="postCont">
+                                   <div id="postIntro">
+
+                                       <p id="PPost1">THE</p>
+                                       <p id="PPost3">POSTS</p>
+
+                                       <div id="Apost">
+                                           <div id="pub">
+
+                                               <img src="https://i.postimg.cc/DfC3vdWZ/tumblr-nmb9mxf8v-T1u1mutio1-1280.png" /> <br />
+                                               <b id="tit" class="ppost">TITLE OF POST</b> <br />
+                                                                                           <span id="Subt" class="ppost">SUBTITLE OF POST</span><br />
+                                               <span id="bar" class="ppost">-------------------------</span><br />
+                                               <span id="credit" class="ppost">CREDITS / USER / 0000000</span>
+                                           </div>
+                                           <div id="pub">
+
+                                               <img src="https://i.postimg.cc/DfC3vdWZ/tumblr-nmb9mxf8v-T1u1mutio1-1280.png" /> <br />
+                                               <b id="tit" class="ppost">TITLE OF POST</b> <br />
+                                               <span id="Subt" class="ppost">SUBTITLE OF POST</span><br />
+                                               <span id="bar" class="ppost">-------------------------</span><br />
+                                               <span id="credit" class="ppost">CREDITS / USER / 0000000</span>
+                                           </div>
+
+                                       </div>
+
+                                   </div>
+
+                               </div>
+                           </div>
+                           <div id="Friends">
+
+                               <div id="FriendIntro">
+
+                                   <p id="PPost2">THE</p>
+                                   <p id="PPost4">FRIENDs</p>
+                                   <div id="aFri">
+                                       <div id="fri">
+                                           <div id="fimg1">
+                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                           </div>
+                                           <span id="fname">xEVANGELIST/1533252890</span>
+                                           <span id="fdesc">
+                                               "Disembodied, gasping, I tumbled
+                                               In the flush of a thousand cold lights,
+                                               through this night of neon,
+                                               That I'll never belong to..."
+                                           </span><br />
+                                           <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                       </div>
+                                       <div id="fri">
+                                           <div id="fimg1">
+                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                           </div>
+                                           <span id="fname">xEVANGELIST/1533252890</span>
+                                           <span id="fdesc">
+                                               "Disembodied, gasping, I tumbled
+                                               In the flush of a thousand cold lights,
+                                               through this night of neon,
+                                               That I'll never belong to..."
+                                           </span><br />
+                                           <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                       </div> <div id="fri">
+                                           <div id="fimg1">
+                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                           </div>
+                                           <span id="fname">xEVANGELIST/1533252890</span>
+                                           <span id="fdesc">
+                                               "Disembodied, gasping, I tumbled
+                                               In the flush of a thousand cold lights,
+                                               through this night of neon,
+                                               That I'll never belong to..."
+                                           </span><br />
+                                           <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                       </div> <div id="fri">
+                                           <div id="fimg1">
+                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                           </div>
+                                           <span id="fname">xEVANGELIST/1533252890</span>
+                                           <span id="fdesc">
+                                               "Disembodied, gasping, I tumbled
+                                               In the flush of a thousand cold lights,
+                                               through this night of neon,
+                                               That I'll never belong to..."
+                                           </span><br />
+                                           <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                       </div> <div id="fri">
+                                           <div id="fimg1">
+                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                           </div>
+                                           <span id="fname">xEVANGELIST/1533252890</span>
+                                           <span id="fdesc">
+                                               "Disembodied, gasping, I tumbled
+                                               In the flush of a thousand cold lights,
+                                               through this night of neon,
+                                               That I'll never belong to..."
+                                           </span><br />
+                                           <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                       </div>
+                                   </div>
+                               </div>
+
+
+                           </div>
+                           <div id="music">
+                               <div id="backf">
+                                   <div id="Repr">
+
+
+                                       <div id="Mtt">The Eerie Cold</div>
+
+
+                                       <div id="band">
+                                           Shining – The Eerie Cold
+                                       </div> <img id="play" src="https://i.postimg.cc/zfyS5wLC/play-button.png">
+                                       <img id="retr" class="bt1" src="https://i.postimg.cc/D0Jcgrhf/444.png"> 
+                                       <img id="adv" class="bt1" src="https://i.postimg.cc/br79FZYx/boton-reproducir-siguiente.png">
+
+
+                                       <div id="ines">
+
+
+                                           <div id="LinBk">
+
+
+                                               <div id="LinIn">&nbsp;</div>
+                                           </div>
+                                       </div> <p id="T0">0:00</p>
+
+                                       <p id="Tf">5:51</p> <img id="ag" class="bt2" src="https://i.postimg.cc/y6hVnwfR/3736241.png"> 
+                                       <img id="com" class="bt2" src="https://i.postimg.cc/mZPxqK2k/replay.png">
+
+                                       <div id="control">
+                                     
+                                       </div>
+                                   </div>
+
+                               </div>
+                               <div id="album">
+                                   <img id="imgback1" src="https://i.postimg.cc/0rgfdfLx/258060-emp.jpg" />
+                                   <img id="imgfont" src="https://i.postimg.cc/0rgfdfLx/258060-emp.jpg" />
+                               </div>
+
+
+                           </div>
+                       </div>
+
+
+                        <div id="foot">
+                            <div id="xatlog"> <img src="https://i.postimg.cc/9FmQ1fMP/1.png" /></div>
+                            <a href="https://xat.me/xEvangelist">  <div id="crdy"><p>xEVANGELIST / XAT.COM® ALL RIGHTS© RESERVED 2021 </p></div></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
