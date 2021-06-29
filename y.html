@@ -662,11 +662,149 @@
         #m1:target #aboutinf, #m1:target #aboutIntro span, #m1:target #Ared, #m1:target #cirl {
             opacity: 0;
         }
-        #m1:target #aboutinf, #m1:target #aboutIntro span, #m1:target #Ared, #m1:target#cirl{
+        #m1:target #aboutinf, #m1:target #aboutIntro span, #m1:target #Ared, #m1:target#cirl {
             animation: entrance .5s 1;
             animation-delay: 1s;
             animation-fill-mode: forwards;
         }
+        #submenu2 { width:35%; height:100%;  right:0; position:absolute;
+        }
+        #cdro1 { position:absolute; right:0; height:100%; width:12%; background:dimgray;
+        }
+        #cdro2 { z-index:999;
+            position: absolute;
+            right: 0;
+            height: 40%;
+            width: 40%;
+            background: dimgray;
+        }
+            #cdro2 p { color:white; font-size:.7vw; letter-spacing:.2vw; margin-right:20%; transition:.5s all ease;
+            }
+                #pl:hover { letter-spacing:.3vw;
+                }
+                #fd {
+                    position: absolute;
+                    width: .6vw;
+                    transform: rotate(90deg);
+                    left: 65%;
+                    top: 35%;
+                    animation: ltop 2s infinite;
+                }
+        @keyframes ltop {
+            0% {
+                top: 35%;
+            }
+
+           33% {
+                top: 40%;
+            }
+            66% {
+                top: 30%;
+            }
+            100% {
+                top:35%;
+            }
+        }
+        #serch { position:absolute; width:40%; height:35%;  top:5%; left:19%; z-index:999;
+        }
+        #boxsrh {
+            position: absolute;
+            width: 70%; overflow:hidden;
+            background: dimgray;
+            height: 100%;
+            text-align: left;
+            -webkit-user-modify: read-write;
+        }
+        #btnrd { position:absolute; height:100%; right:0%; width:28%; background:#d03838;
+        }
+        #boxsrh p{ color:white; font-size:.7vw; letter-spacing:.2vw; font-style:italic; padding-left:.5vw; 
+        }
+        #barmen { width:90%; left:5%; height:5%; position:absolute; top:81%; background:#3b3b3b; z-index:999;
+        }
+        #barmmu {
+            width: 10%;
+            height: 70%;
+            top: -70%;
+            right: 2%;
+            position: absolute;
+            background: #3b3b3b;
+        }
+        #icon { filter:invert(100%); width:1.5vw; height:1.5vw; position:absolute; right:80%; bottom:15%;
+        }
+        #com1 { overflow:hidden; width:25%; height:20%; background:#171717; bottom:20%; left:22%; position:absolute; border-radius:1vw; color:white; letter-spacing:.15vw; font-size:.55vw; filter:blur(.5px);
+        }
+        #spp { margin-top:.3vw;
+        }
+            #spp span { color:#d03838;
+            }
+        #cube3 { width:20%; height:30%; background:#d03838; position:absolute; bottom:15%; left:50%;
+        }
+        #txt2 { color:white; font-size:.8vw; letter-spacing:.2vw; margin-top:.5vw;  animation:ent 1s infinite;
+        }
+        @keyframes ent {
+            0% {
+                opacity:0;
+            }
+            48.9% {
+                opacity: 0;
+            }
+            49% {
+                opacity: 1;
+            }
+
+            99% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+        #btnrd img { position:absolute; filter:invert(100%); width:1.5vw; top:.2vw; left:1.2vw;
+        }
+        #sep { width:100%; height:.1vw; position:absolute; top:50%; border-bottom:dashed .2vw dimgray; filter:blur(.5px);
+        }
+        #ecu, #ecu2, #ecu3, #ecu4, #ecu5, #ecu6 {
+            width: 15%;
+            height: 20%;
+            position: absolute;
+            left: 5%;
+            top: 80%;
+            transform: rotate(180deg);
+            opacity: .7;
+            filter: grayscale(100%) contrast(400%) invert(100%);
+        }
+        #ecu2 { left:20%; 
+        }
+        #ecu3 {
+            left: 35%;
+        }
+        /*#ecu4 {
+            left: 50%;
+        }
+        #ecu5 {
+            left: 65%;
+        }
+        #ecu6 {
+            left: 80%;
+        }*/
+        #mess { width:44%; right:5%; height:8%; background:#3b3b3b; bottom:5%; position:absolute;
+        }
+        #barmmu span {
+            color: white;
+            font-size: 1.5vw;
+            margin: .5vw;
+            font-weight: bold;
+        }
+        #k1 {
+            
+            color: dimgray;
+        }
+        #m1:target #k1, #m4:target #k2, #m3:target #k3, #m2:target #k4 {
+            color: dimgray;
+        }
+       
+
     </style>
 </head>
 <body>
@@ -676,239 +814,263 @@
                 <div id="m3">
                     <div id="m4">
 
-                       <div id="menu">
-                          
-                           <div id="selectr">
-                               <div id="triangle"></div>
-                           </div>
-                           <div id="submenu">
-                               <a href="#m1">
-                                   <div id="Maintrgt">
-                                       <img id="mign" src="https://i.postimg.cc/2ySsmPkG/abstracto.png" />
-                                       <p id="Mainnick">NISHI</p>
-                                   </div>
-                               </a>
+                        <div id="menu">
+                            <div id="submenu2">
+                                <div id="cdro1"></div>
+                                <div id="cdro2"><p id="pl">LOGIN/EDIT</p><img id="fd" src="https://i.postimg.cc/Vk0W3CGZ/flecha-correcta.png" /></div>
+                                <div id="serch">
+                                    <div id="boxsrh"><p id="txt">SEARCH...</p></div>
+                                    <div id="btnrd">
+                                        <img src="https://i.postimg.cc/m25khPgG/lupa.png" />
+                                    </div>
+                                </div>
+                                <img id="icon" src="https://i.postimg.cc/rwxnztNd/comentario.png" />
+                                <div id="com1"><p id="spp">103K KLT-45 <span>[]</span> 001</p></div>
+                                <div id="cube3"><p id="txt2">ONLINE</p></div>
+                            </div>
+                            <div id="selectr">
+                                <div id="triangle"></div>
+                            </div>
+                            <div id="submenu">
+                                <a href="#m1">
+                                    <div id="Maintrgt">
+                                        <img id="mign" src="https://i.postimg.cc/2ySsmPkG/abstracto.png" />
+                                        <p id="Mainnick">NISHI</p>
+                                    </div>
+                                </a>
 
-                               <a href="#m4">
-                                   <div id="menu1" class="menus">
-                                       <span id="sp1">POSTS</span>
-                                       <img id="img1" src="https://i.postimg.cc/2SxvPJt3/niveles.png" />
-                                   </div>
+                                <a href="#m4">
+                                    <div id="menu1" class="menus">
+                                        <span id="sp1">POSTS</span>
+                                        <img id="img1" src="https://i.postimg.cc/2SxvPJt3/niveles.png" />
+                                    </div>
 
-                               </a>
-                               <a href="#m3">
-                                   <div id="menu2" class="menus">
-                                       <span id="sp2">FRIENDs</span>
-                                       <img id="img2" src="https://i.postimg.cc/2SxvPJt3/niveles.png" />
-                                   </div>
+                                </a>
+                                <a href="#m3">
+                                    <div id="menu2" class="menus">
+                                        <span id="sp2">FRIENDs</span>
+                                        <img id="img2" src="https://i.postimg.cc/2SxvPJt3/niveles.png" />
+                                    </div>
 
-                               </a> <a href="#m2">
-                                   <div id="menu3" class="menus">
-                                       <span id="sp3">MUSIC</span>
-                                       <img id="img3" src="https://i.postimg.cc/2SxvPJt3/niveles.png" />
-                                   </div>
+                                </a> <a href="#m2">
+                                    <div id="menu3" class="menus">
+                                        <span id="sp3">MUSIC</span>
+                                        <img id="img3" src="https://i.postimg.cc/2SxvPJt3/niveles.png" />
+                                    </div>
 
-                               </a>
-                           
-                           </div>
+                                </a>
 
-                       </div>
+                            </div>
 
-                       <div id="cont">
-                           <div id="mainIm">
-                               <div id="Rot">
-                                   <img id="Mimg1" class="imgMain" src="https://i.postimg.cc/N0x1h0d3/wp2762997.jpg" />
-                                   <img id="Mimg2" class="imgMain" src="https://i.postimg.cc/DfC3vdWZ/tumblr-nmb9mxf8v-T1u1mutio1-1280.png" />
-                                   <img id="Mimg3" class="imgMain" src="https://i.postimg.cc/4y2DWsCt/tumblr-507f60556e7b58ab8b6df3826f9630f1-77bac32e-2048.jpg" />
+                        </div>
 
-                                   <img id="Mimg4" class="imgMain" src="https://i.postimg.cc/HnLG0jNd/687474703a2f2f73342e666176696d2e636f6d2f6f7269672f3135303232372f626c61636b2d616e642d77686974652d6772.jpg" />
-                               </div>
+                        <div id="cont">
+                            <div id="mainIm">
+                                <div id="Rot">
+                                    <img id="Mimg1" class="imgMain" src="https://i.postimg.cc/N0x1h0d3/wp2762997.jpg" />
+                                    <img id="Mimg2" class="imgMain" src="https://i.postimg.cc/DfC3vdWZ/tumblr-nmb9mxf8v-T1u1mutio1-1280.png" />
+                                    <img id="Mimg3" class="imgMain" src="https://i.postimg.cc/4y2DWsCt/tumblr-507f60556e7b58ab8b6df3826f9630f1-77bac32e-2048.jpg" />
 
-
-                           </div>
-                           <div id="About">
-                              
-                               <div id="aboutIntro">
-
-                                   <p id="PPost5">ABOUT</p>
-                                   <p id="PPost6">ME:</p>
-
-                                   <div id="aboutinf">
-                                       <div id="imgfon">
-                                           <img src="https://u.cubeupload.com/Azhriell/yj.jpg" id="imgpst" />
-                                       </div>
-
-                                   </div>
-                                   <span id="nmereg">NAYELYS / NAYI</span>
-                                   <span id="nmenum">1522135253</span>
-                                   <div id="Ared">
-                                       <img class="red" src="https://i.postimg.cc/wj2wFsvn/facebook-1.png" /> 
-                                       <img class="red" src="https://i.postimg.cc/g2mMvKYv/logotipo-de-twitter-sobre-fondo-negro.png" /> 
-                                       <img class="red" src="https://i.postimg.cc/rppQHFRs/tumblr-1.png" /> <span id="sp11">/NAYELIS</span><span id="sp22">/NAYELIS</span><span id="sp33">/NAYELIS</span>
-                                   </div>
-                                   <div id="cirl">
-                                       <div class="c1"></div>
-                                       <div class="c1"></div>
-                                       <div class="c1"></div>
-                                   </div>
-
-                               </div>
-
-                              
-                           </div>
-                           <div id="posts">
-                               <div id="postCont">
-                                   <div id="postIntro">
-
-                                       <p id="PPost1">THE</p>
-                                       <p id="PPost3">POSTS</p>
-
-                                       <div id="Apost">
-                                           <div id="pub">
-
-                                               <img src="https://i.postimg.cc/DfC3vdWZ/tumblr-nmb9mxf8v-T1u1mutio1-1280.png" /> <br />
-                                               <b id="tit" class="ppost">TITLE OF POST</b> <br />
-                                                                                           <span id="Subt" class="ppost">SUBTITLE OF POST</span><br />
-                                               <span id="bar" class="ppost">-------------------------</span><br />
-                                               <span id="credit" class="ppost">CREDITS / USER / 0000000</span>
-                                           </div>
-                                           <div id="pub">
-
-                                               <img src="https://i.postimg.cc/DfC3vdWZ/tumblr-nmb9mxf8v-T1u1mutio1-1280.png" /> <br />
-                                               <b id="tit" class="ppost">TITLE OF POST</b> <br />
-                                               <span id="Subt" class="ppost">SUBTITLE OF POST</span><br />
-                                               <span id="bar" class="ppost">-------------------------</span><br />
-                                               <span id="credit" class="ppost">CREDITS / USER / 0000000</span>
-                                           </div>
-
-                                       </div>
-
-                                   </div>
-
-                               </div>
-                           </div>
-                           <div id="Friends">
-
-                               <div id="FriendIntro">
-
-                                   <p id="PPost2">THE</p>
-                                   <p id="PPost4">FRIENDs</p>
-                                   <div id="aFri">
-                                       <div id="fri">
-                                           <div id="fimg1">
-                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
-                                           </div>
-                                           <span id="fname">xEVANGELIST/1533252890</span>
-                                           <span id="fdesc">
-                                               "Disembodied, gasping, I tumbled
-                                               In the flush of a thousand cold lights,
-                                               through this night of neon,
-                                               That I'll never belong to..."
-                                           </span><br />
-                                           <span id="bar2" class="ppost">-----------------------</span><br />
-
-                                       </div>
-                                       <div id="fri">
-                                           <div id="fimg1">
-                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
-                                           </div>
-                                           <span id="fname">xEVANGELIST/1533252890</span>
-                                           <span id="fdesc">
-                                               "Disembodied, gasping, I tumbled
-                                               In the flush of a thousand cold lights,
-                                               through this night of neon,
-                                               That I'll never belong to..."
-                                           </span><br />
-                                           <span id="bar2" class="ppost">-----------------------</span><br />
-
-                                       </div> <div id="fri">
-                                           <div id="fimg1">
-                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
-                                           </div>
-                                           <span id="fname">xEVANGELIST/1533252890</span>
-                                           <span id="fdesc">
-                                               "Disembodied, gasping, I tumbled
-                                               In the flush of a thousand cold lights,
-                                               through this night of neon,
-                                               That I'll never belong to..."
-                                           </span><br />
-                                           <span id="bar2" class="ppost">-----------------------</span><br />
-
-                                       </div> <div id="fri">
-                                           <div id="fimg1">
-                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
-                                           </div>
-                                           <span id="fname">xEVANGELIST/1533252890</span>
-                                           <span id="fdesc">
-                                               "Disembodied, gasping, I tumbled
-                                               In the flush of a thousand cold lights,
-                                               through this night of neon,
-                                               That I'll never belong to..."
-                                           </span><br />
-                                           <span id="bar2" class="ppost">-----------------------</span><br />
-
-                                       </div> <div id="fri">
-                                           <div id="fimg1">
-                                               <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
-                                           </div>
-                                           <span id="fname">xEVANGELIST/1533252890</span>
-                                           <span id="fdesc">
-                                               "Disembodied, gasping, I tumbled
-                                               In the flush of a thousand cold lights,
-                                               through this night of neon,
-                                               That I'll never belong to..."
-                                           </span><br />
-                                           <span id="bar2" class="ppost">-----------------------</span><br />
-
-                                       </div>
-                                   </div>
-                               </div>
+                                    <img id="Mimg4" class="imgMain" src="https://i.postimg.cc/HnLG0jNd/687474703a2f2f73342e666176696d2e636f6d2f6f7269672f3135303232372f626c61636b2d616e642d77686974652d6772.jpg" />
+                                </div>
 
 
-                           </div>
-                           <div id="music">
-                               <div id="backf">
-                                   <div id="Repr">
+                            </div>
+                            <div id="About">
+
+                                <div id="aboutIntro">
+
+                                    <p id="PPost5">ABOUT</p>
+                                    <p id="PPost6">ME:</p>
+
+                                    <div id="aboutinf">
+                                        <div id="imgfon">
+                                            <img src="https://u.cubeupload.com/Azhriell/yj.jpg" id="imgpst" />
+                                        </div>
+
+                                    </div>
+                                    <span id="nmereg">NAYELYS / NAYI</span>
+                                    <span id="nmenum">1522135253</span>
+                                    <div id="Ared">
+                                        <img class="red" src="https://i.postimg.cc/wj2wFsvn/facebook-1.png" />
+                                        <img class="red" src="https://i.postimg.cc/g2mMvKYv/logotipo-de-twitter-sobre-fondo-negro.png" />
+                                        <img class="red" src="https://i.postimg.cc/rppQHFRs/tumblr-1.png" /> <span id="sp11">/NAYELIS</span><span id="sp22">/NAYELIS</span><span id="sp33">/NAYELIS</span>
+                                    </div>
+                                    <div id="cirl">
+                                        <div class="c1"></div>
+                                        <div class="c1"></div>
+                                        <div class="c1"></div>
+                                    </div>
+
+                                </div>
 
 
-                                       <div id="Mtt">The Eerie Cold</div>
+                            </div>
+                            <div id="posts">
+                                <div id="postCont">
+                                    <div id="postIntro">
+
+                                        <p id="PPost1">THE</p>
+                                        <p id="PPost3">POSTS</p>
+
+                                        <div id="Apost">
+                                            <div id="pub">
+
+                                                <img src="https://i.postimg.cc/DfC3vdWZ/tumblr-nmb9mxf8v-T1u1mutio1-1280.png" /> <br />
+                                                <b id="tit" class="ppost">TITLE OF POST</b> <br />
+                                                <span id="Subt" class="ppost">SUBTITLE OF POST</span><br />
+                                                <span id="bar" class="ppost">-------------------------</span><br />
+                                                <span id="credit" class="ppost">CREDITS / USER / 0000000</span>
+                                            </div>
+                                            <div id="pub">
+
+                                                <img src="https://i.postimg.cc/DfC3vdWZ/tumblr-nmb9mxf8v-T1u1mutio1-1280.png" /> <br />
+                                                <b id="tit" class="ppost">TITLE OF POST</b> <br />
+                                                <span id="Subt" class="ppost">SUBTITLE OF POST</span><br />
+                                                <span id="bar" class="ppost">-------------------------</span><br />
+                                                <span id="credit" class="ppost">CREDITS / USER / 0000000</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="Friends">
+
+                                <div id="FriendIntro">
+
+                                    <p id="PPost2">THE</p>
+                                    <p id="PPost4">FRIENDs</p>
+                                    <div id="aFri">
+                                        <div id="fri">
+                                            <div id="fimg1">
+                                                <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                            </div>
+                                            <span id="fname">xEVANGELIST/1533252890</span>
+                                            <span id="fdesc">
+                                                "Disembodied, gasping, I tumbled
+                                                In the flush of a thousand cold lights,
+                                                through this night of neon,
+                                                That I'll never belong to..."
+                                            </span><br />
+                                            <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                        </div>
+                                        <div id="fri">
+                                            <div id="fimg1">
+                                                <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                            </div>
+                                            <span id="fname">xEVANGELIST/1533252890</span>
+                                            <span id="fdesc">
+                                                "Disembodied, gasping, I tumbled
+                                                In the flush of a thousand cold lights,
+                                                through this night of neon,
+                                                That I'll never belong to..."
+                                            </span><br />
+                                            <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                        </div> <div id="fri">
+                                            <div id="fimg1">
+                                                <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                            </div>
+                                            <span id="fname">xEVANGELIST/1533252890</span>
+                                            <span id="fdesc">
+                                                "Disembodied, gasping, I tumbled
+                                                In the flush of a thousand cold lights,
+                                                through this night of neon,
+                                                That I'll never belong to..."
+                                            </span><br />
+                                            <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                        </div> <div id="fri">
+                                            <div id="fimg1">
+                                                <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                            </div>
+                                            <span id="fname">xEVANGELIST/1533252890</span>
+                                            <span id="fdesc">
+                                                "Disembodied, gasping, I tumbled
+                                                In the flush of a thousand cold lights,
+                                                through this night of neon,
+                                                That I'll never belong to..."
+                                            </span><br />
+                                            <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                        </div> <div id="fri">
+                                            <div id="fimg1">
+                                                <img src="https://u.cubeupload.com/Azhriell/c652.jpg" />
+                                            </div>
+                                            <span id="fname">xEVANGELIST/1533252890</span>
+                                            <span id="fdesc">
+                                                "Disembodied, gasping, I tumbled
+                                                In the flush of a thousand cold lights,
+                                                through this night of neon,
+                                                That I'll never belong to..."
+                                            </span><br />
+                                            <span id="bar2" class="ppost">-----------------------</span><br />
+
+                                        </div>
+                                    </div>
+                                </div>
 
 
-                                       <div id="band">
-                                           Shining – The Eerie Cold
-                                       </div> <img id="play" src="https://i.postimg.cc/zfyS5wLC/play-button.png">
-                                       <img id="retr" class="bt1" src="https://i.postimg.cc/D0Jcgrhf/444.png"> 
-                                       <img id="adv" class="bt1" src="https://i.postimg.cc/br79FZYx/boton-reproducir-siguiente.png">
+                            </div>
+                            <div id="music">
+                                <div id="backf">
+                                    <div id="Repr">
 
 
-                                       <div id="ines">
+                                        <div id="Mtt">The Eerie Cold</div>
 
 
-                                           <div id="LinBk">
+                                        <div id="band">
+                                            Shining – The Eerie Cold
+                                        </div> <img id="play" src="https://i.postimg.cc/zfyS5wLC/play-button.png">
+                                        <img id="retr" class="bt1" src="https://i.postimg.cc/D0Jcgrhf/444.png">
+                                        <img id="adv" class="bt1" src="https://i.postimg.cc/br79FZYx/boton-reproducir-siguiente.png">
 
 
-                                               <div id="LinIn">&nbsp;</div>
-                                           </div>
-                                       </div> <p id="T0">0:00</p>
-
-                                       <p id="Tf">5:51</p> <img id="ag" class="bt2" src="https://i.postimg.cc/y6hVnwfR/3736241.png"> 
-                                       <img id="com" class="bt2" src="https://i.postimg.cc/mZPxqK2k/replay.png">
-
-                                       <div id="control">
-                                     
-                                       </div>
-                                   </div>
-
-                               </div>
-                               <div id="album">
-                                   <img id="imgback1" src="https://i.postimg.cc/0rgfdfLx/258060-emp.jpg" />
-                                   <img id="imgfont" src="https://i.postimg.cc/0rgfdfLx/258060-emp.jpg" />
-                               </div>
+                                        <div id="ines">
 
 
-                           </div>
-                       </div>
+                                            <div id="LinBk">
 
+
+                                                <div id="LinIn">&nbsp;</div>
+                                            </div>
+                                        </div> <p id="T0">0:00</p>
+
+                                        <p id="Tf">5:51</p> <img id="ag" class="bt2" src="https://i.postimg.cc/y6hVnwfR/3736241.png">
+                                        <img id="com" class="bt2" src="https://i.postimg.cc/mZPxqK2k/replay.png">
+
+                                        <div id="control">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="album">
+                                    <img id="imgback1" src="https://i.postimg.cc/0rgfdfLx/258060-emp.jpg" />
+                                    <img id="imgfont" src="https://i.postimg.cc/0rgfdfLx/258060-emp.jpg" />
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div id="barmen">
+                            <div id="barmmu"><a href="#m1"><span id="k1">1</span></a><a href="#m4"><span id="k2">2</span></a>
+                            <a href="#m3"><span id="k3">3</span></a><a href="#m2"><span id="k4">4</span></a>
+                                </div><div id="sep"></div>
+                        </div>
+                        <img id="ecu" src="https://i.postimg.cc/Y9WZNy13/5dac85a365b2d91b4c0e4360-equalizer-gif-6.gif" />
+                        <img id="ecu2" src="https://i.postimg.cc/Y9WZNy13/5dac85a365b2d91b4c0e4360-equalizer-gif-6.gif" />
+                        <img id="ecu3" src="https://i.postimg.cc/Y9WZNy13/5dac85a365b2d91b4c0e4360-equalizer-gif-6.gif" />
+                        <!--<img id="ecu4" src="https://i.postimg.cc/Y9WZNy13/5dac85a365b2d91b4c0e4360-equalizer-gif-6.gif" />
+                        <img id="ecu5" src="https://i.postimg.cc/Y9WZNy13/5dac85a365b2d91b4c0e4360-equalizer-gif-6.gif" />
+                        <img id="ecu6" src="https://i.postimg.cc/Y9WZNy13/5dac85a365b2d91b4c0e4360-equalizer-gif-6.gif" />-->
+                        <div id="mess"></div>
 
                         <div id="foot">
                             <div id="xatlog"> <img src="https://i.postimg.cc/9FmQ1fMP/1.png" /></div>
